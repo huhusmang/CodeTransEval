@@ -1,0 +1,20 @@
+def minSum(nums1, nums2):
+    s1 = 0
+    zero1 = False
+    for x in nums1:
+        if x == 0:
+            zero1 = True
+            s1 += 1
+        else:
+            s1 += x
+    s2 = 0
+    zero2 = False
+    for x in nums2:
+        if x == 0:
+            zero2 = True
+            s2 += 1
+        else:
+            s2 += x
+    if (not zero1 and s1 < s2) or (not zero2 and s2 < s1):
+        return -1
+    return max(s1, s2)

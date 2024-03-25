@@ -1,0 +1,33 @@
+public static long[] countBlackBlocks(int m, int n, int[][] coordinates) {
+    List<Long> ansList = new ArrayList<>(Collections.nCopies(5, 0L));
+    long sum = (long) (m - 1) * (n - 1);
+    Set<Long> st = new HashSet<>();
+    int num = coordinates.length;
+    for (int i = 0; i < num; i++)
+        st.add((long) coordinates[i][0] * n + coordinates[i][1]);
+    int[][][] arr = {
+        {{0, -1}, {-1, -1}, {-1, 0}},
+        {{0, 1}, {-1, 0}, {-1, 1}},
+        {{0, -1}, {1, 0}, {1, -1}},
+        {{0, 1}, {1, 0}, {1, 1}}
+    };
+    for (int i = 0; i < num; i++) {
+        long x = coordinates[i][0], y = coordinates[i][1];
+        for (int[][] a : arr) {
+            int cnt = 1;
+            for (int[] direction : a) {
+                long nx = x + direction[0], ny = y + direction[1];
+                if (nx < 0 || ny < 0 || nx >= m || ny >= n) {
+                    cnt = 0;
+                    break;
+                }
+                if (st.contains(nx * n + ny)) cnt++;
+            }
+            ansList.set(cnt, ansList.get(cnt) + 1);
+        }
+    }
+    for (int i = 2; i <= 4; i++) ansList.set(i, ansList.get(i) / i);
+    ansList.set(0, sum - ansList.get(1) - ansList.get(2) - ansList.get(3) - ansList.get(4));
+    long[] ans = ansList.stream().mapToLong(Long::longValue).toArray();
+    return ans;
+}

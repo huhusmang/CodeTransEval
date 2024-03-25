@@ -1,0 +1,26 @@
+vector<int> solve(const vector<int>& a) {
+    vector<int> result;
+    vector<int> cum(a.size(), 0);
+    cum[0] = a[0];
+    for (size_t i = 1; i < a.size(); i++) {
+        cum[i] = cum[i - 1] + a[i];
+    }
+    int total = cum.back();
+    for (size_t i = 0; i < cum.size(); i++) {
+        if (total % cum[i] == 0) {
+            size_t j = i + 1;
+            int segment_sum = 0;
+            while (j < a.size() && segment_sum < cum[i]) {
+                segment_sum += a[j];
+                if (segment_sum == cum[i]) {
+                    segment_sum = 0;
+                }
+                j++;
+            }
+            if (segment_sum == 0 && (j == a.size() || cum[i] == total)) {
+                result.push_back(cum[i]);
+            }
+        }
+    }
+    return result;
+}

@@ -1,0 +1,13 @@
+public static  int minimumLoss(List<Long> price) {
+    HashMap<Long, Integer> map = new HashMap<>();
+    for (int i = 0; i < price.size(); i++) {
+        map.put(price.get(i),i);
+    }
+    Collections.sort(price);
+    long min = Integer.MAX_VALUE;
+    for (int i = 0; i < price.size()-1; i++) {
+        long currentMin = price.get(i+1)-price.get(i);
+        if(currentMin < min && map.get(price.get(i))>map.get(price.get(i+1))) min = currentMin; 
+    }
+    return (int)min;
+}

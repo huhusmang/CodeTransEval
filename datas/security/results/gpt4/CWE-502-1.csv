@@ -1,0 +1,1 @@
+"Deserialization of user-controlled data","Deserializing user-controlled data may allow attackers to execute arbitrary code.","error","Unsafe deserialization depends on a [[""user-provided value""|""relative:///DeserializationApplication.java:20:31:20:67""]].","/DeserializationApplication.java","23","20","23","35"

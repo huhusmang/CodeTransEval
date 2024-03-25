@@ -1,0 +1,6 @@
+long solve(int a, int b) {
+    long m = a;
+    long n = b;
+    long ans = min(((m-1)*n+(n-1)), ((n-1)*m+(m-1)));
+    return m*n - 1;
+}

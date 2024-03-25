@@ -1,0 +1,13 @@
+def deleteNode(llist, position):
+    if not llist:
+        return 
+    if position == 0:
+        return llist.next
+    current = previous = llist
+    pointer = 1
+    while pointer < position+1:
+        previous = current
+        current = current.next
+        pointer += 1
+    previous.next = current.next
+    return llist

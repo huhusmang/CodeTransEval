@@ -1,0 +1,19 @@
+public static int longestEqualSubarray(List<Integer> nums, int k) {
+    int n = nums.size(), ans = 0;
+    List<Integer>[] pos = new ArrayList[n + 1];
+    Arrays.setAll(pos, e -> new ArrayList<>());
+    for (int i = 0; i < n; i++) {
+        int x = nums.get(i);
+        pos[x].add(i - pos[x].size());
+    }
+    for (var ps : pos) {
+        if (ps.size() <= ans) continue;
+        int left = 0;
+        for (int right = 0; right < ps.size(); right++) {
+            while (ps.get(right) - ps.get(left) > k) 
+                left++;
+            ans = Math.max(ans, right - left + 1);
+        }
+    }
+    return ans;
+}

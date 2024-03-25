@@ -1,0 +1,25 @@
+int minimumBeautifulSubstrings(string s) {
+    if(s[0]==0) return -1;
+    unordered_map<string,int>s1;
+    int n = s.size();
+    s1["1"]++;
+    s1["101"]++;
+    s1["11001"]++;
+    s1["1111101"]++;
+    s1["1001110001"]++;
+    s1["110000110101"]++;
+    s1["11110100001001"]++;
+    string s2="";
+    vector<int>f(n+10,1e9);
+    f[0]=0;
+    for(int i =0;i<n;i++)
+        for(int j =i;j<n;j++)
+        {
+            s2="";
+            for(int k=i;k<=j;k++)
+                s2+=s[k];
+            if(s1.find(s2)!=s1.end()) f[j+1]=min(f[j+1],f[i]+1);
+        }
+    if(f[n]==1e9) return -1;
+    return f[n];
+}

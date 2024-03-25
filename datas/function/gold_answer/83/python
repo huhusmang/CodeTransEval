@@ -1,0 +1,23 @@
+def gcdAndLcm(x: int, y: int) -> int:
+    n = x * y
+    ans = 0
+    for i in range(x,y+1):
+        if n % i == 0 and gcd(i, n // i) == x and lcm(i, n // i) == y:
+            ans += 1
+    return ans
+def gcd(x: int, y: int) -> int:
+    if x < y:
+        x, y = y, x
+    r = x % y  
+    while r != 0:
+        x = y
+        y = r
+        r = x % y
+    return y
+def lcm(x: int, y: int) -> int:
+    if x < y:
+        x, y = y, x
+    m = x
+    while x % y != 0:
+        x = x+m
+    return x

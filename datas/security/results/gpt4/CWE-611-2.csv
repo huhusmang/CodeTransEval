@@ -1,0 +1,2 @@
+"Resolving XML external entity in user-controlled data","Parsing user-controlled XML documents and allowing expansion of external entity references may lead to disclosure of confidential data or denial of service.","error","XML parsing depends on a [[""user-provided value""|""relative:///Application.java:24:26:24:63""]] without guarding against external entity expansion.
+XML parsing depends on a [[""user-provided value""|""relative:///Application.java:28:86:28:99""]] without guarding against external entity expansion.","/Application.java","28","42","28","102"

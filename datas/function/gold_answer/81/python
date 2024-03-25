@@ -1,0 +1,25 @@
+def countBlackBlocks(m, n, coordinates):
+    ans = [0] * 5
+    sum_blocks = (m - 1) * (n - 1)
+    st = set((x * n + y) for x, y in coordinates)
+    arr = [
+        [(0, -1), (-1, -1), (-1, 0)],
+        [(0, 1), (-1, 0), (-1, 1)],
+        [(0, -1), (1, 0), (1, -1)],
+        [(0, 1), (1, 0), (1, 1)]
+    ]
+    for x, y in coordinates:
+        for a in arr:
+            cnt = 1
+            for dx, dy in a:
+                nx, ny = x + dx, y + dy
+                if nx < 0 or ny < 0 or nx >= m or ny >= n:
+                    cnt = 0
+                    break
+                if (nx * n + ny) in st:
+                    cnt += 1
+            ans[cnt] += 1
+    for i in range(2, 5):
+        ans[i] //= i
+    ans[0] = sum_blocks - sum(ans[1:])
+    return ans

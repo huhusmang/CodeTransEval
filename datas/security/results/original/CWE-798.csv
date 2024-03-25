@@ -1,0 +1,1 @@
+"Hard-coded credentials","Credentials are hard coded in the source code of the application.","error","This hardcoded value is [[""used as credentials""|""relative:///1/vul.py:7:20:7:31""]].","/1/vul.py","7","20","7","31"

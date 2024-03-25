@@ -1,0 +1,10 @@
+def maxIncreasingGroups(usageLimits: List[int]) -> int:
+    ul = sorted(usageLimits)
+    remain = 0
+    require = 1
+    for num in ul:
+        remain += num
+        if remain >= require:
+            remain -= require 
+            require += 1 
+    return require - 1

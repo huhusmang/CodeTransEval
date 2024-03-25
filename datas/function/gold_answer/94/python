@@ -1,0 +1,12 @@
+def dfs(head: ListNode, rt: TreeNode) -> bool:
+    if not head:
+        return True
+    if not rt:
+        return False
+    if rt.val != head.val:
+        return False
+    return dfs(head.next, rt.left) or dfs(head.next, rt.right)
+def isSubPath(head: ListNode, root: TreeNode) -> bool:
+    if not root:
+        return False
+    return dfs(head, root) or isSubPath(head, root.left) or isSubPath(head, root.right)

@@ -1,0 +1,10 @@
+def numberOfPoints(nums):
+    diff = [0] * 102
+    for p in nums:
+        diff[p[0]] += 1
+        diff[p[1] + 1] -= 1
+    ans = s = 0
+    for d in diff:
+        s += d
+        ans += s > 0
+    return ans

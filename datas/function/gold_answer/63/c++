@@ -1,0 +1,12 @@
+string isFibo(long long n) {
+    long long start = 0, last = 1;
+    while (last <= n) {
+        long long tmp = last + start;
+        start = last;
+        last = tmp;
+        if (last == n) {
+            return "IsFibo";
+        }
+    }
+    return "IsNotFibo";
+}

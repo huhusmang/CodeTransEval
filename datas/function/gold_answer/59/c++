@@ -1,0 +1,15 @@
+int andXorOr(vector<int> &a) {
+    int m = 0;
+    stack<int> s;
+    for (int i : a) {
+        while (!s.empty() && s.top() >= i) {
+            m = max(m, i ^ s.top());
+            s.pop();
+        }
+        if (!s.empty()) {
+            m = max(m, i ^ s.top());
+        }
+        s.push(i);
+    }
+    return m;
+}

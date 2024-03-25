@@ -1,0 +1,12 @@
+public static int countPairs(List<List<Integer>> coordinates, int k) {
+    int ans = 0;
+    var cnt = new HashMap<Long, Integer>();
+    for (var p : coordinates) {
+        int x = p.get(0), y = p.get(1);
+        for (int i = 0; i <= k; i++) {
+            ans += cnt.getOrDefault((x ^ i) * 2000000L + (y ^ (k - i)), 0);
+        }
+        cnt.merge(x * 2000000L + y, 1, Integer::sum);
+    }
+    return ans;
+}

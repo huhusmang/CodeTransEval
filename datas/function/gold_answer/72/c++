@@ -1,0 +1,26 @@
+vector<vector<int>> matrixRotation(vector<vector<int>>& matrix, int r) {
+    int l = 0;
+    int br = matrix.size();
+    int bc = matrix[0].size();
+    while (l < min(br, bc) / 2) {
+        int rr = r % (2 * (br + bc - 4 * l - 2));
+        while (rr--) {
+            int buf = matrix[l][l];
+            for (int j = l; j < bc - l - 1; ++j) {
+                matrix[l][j] = matrix[l][j + 1];
+            }
+            for (int i = l; i < br - l - 1; ++i) {
+                matrix[i][bc - l - 1] = matrix[i + 1][bc - l - 1];
+            }
+            for (int j = bc - l - 1; j > l; --j) {
+                matrix[br - l - 1][j] = matrix[br - l - 1][j - 1];
+            }
+            for (int i = br - l - 1; i > l + 1; --i) {
+                matrix[i][l] = matrix[i - 1][l];
+            }
+            matrix[l + 1][l] = buf;
+        }
+        ++l;
+    }
+    return matrix;
+}

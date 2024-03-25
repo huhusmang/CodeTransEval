@@ -1,0 +1,26 @@
+public static long minSum(int[] nums1, int[] nums2) {
+    long s1 = 0;
+    boolean zero1 = false;
+    for (int x : nums1) {
+        if (x == 0) {
+            zero1 = true;
+            s1++;
+        } else {
+            s1 += x;
+        }
+    }
+    long s2 = 0;
+    boolean zero2 = false;
+    for (int x : nums2) {
+        if (x == 0) {
+            zero2 = true;
+            s2++;
+        } else {
+            s2 += x;
+        }
+    }
+    if (!zero1 && s1 < s2 || !zero2 && s2 < s1) {
+        return -1;
+    }
+    return Math.max(s1, s2);
+}

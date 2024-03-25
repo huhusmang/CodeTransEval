@@ -1,0 +1,2 @@
+"Code injection","Interpreting unsanitized user input as code allows a malicious user to perform arbitrary code execution.","error","This code execution depends on a [[""user-provided value""|""relative:///2/vul.py:1:26:1:32""]].","/2/vul.py","12","10","12","45"
+"Code injection","Interpreting unsanitized user input as code allows a malicious user to perform arbitrary code execution.","error","This code execution depends on a [[""user-provided value""|""relative:///1/vul.py:2:26:2:32""]].","/1/vul.py","12","10","12","37"

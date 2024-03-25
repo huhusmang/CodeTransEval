@@ -1,0 +1,13 @@
+public static  String isFibo(long n) {
+    long start = 0;
+    long last = 1;
+    while (last <= n) {
+        long tmp = last + start;
+        start = last;
+        last = tmp;
+        if (last == n) {
+            return "IsFibo";
+        }
+    }
+    return "IsNotFibo";
+}

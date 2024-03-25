@@ -1,0 +1,21 @@
+def maxNumberOfAlloys(n: int, k: int, budget: int, composition: List[List[int]], stock: List[int], cost: List[int]) -> int:
+    ans = 0
+    mx = min(stock) + budget
+    for com in composition:
+        def check(num: int) -> int:
+            money = 0
+            for s, base, c in zip(stock, com, cost):
+                if s < base * num:
+                    money += (base * num - s) * c
+                    if money > budget:
+                        return False
+            return True
+        left, right = 0, mx + 1
+        while left + 1 < right:  
+            mid = (left + right) // 2
+            if check(mid):
+                left = mid
+            else:
+                right = mid
+        ans = max(ans, left)
+    return ans

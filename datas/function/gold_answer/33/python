@@ -1,0 +1,14 @@
+def maxSum(nums: List[int], m: int, k: int) -> int:
+    ans = 0
+    s = sum(nums[:k - 1])  
+    cnt = Counter(nums[:k - 1])
+    for out, in_ in zip(nums, nums[k - 1:]):
+        s += in_  
+        cnt[in_] += 1
+        if len(cnt) >= m:
+            ans = max(ans, s)
+        s -= out  
+        cnt[out] -= 1
+        if cnt[out] == 0:
+            del cnt[out]
+    return ans

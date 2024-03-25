@@ -1,0 +1,26 @@
+int maximumPoints(vector<vector<int>> &edges, vector<int> &coins, int k) {
+    vector<vector<int>> g(coins.size());
+    for (auto &e : edges) {
+        int x = e[0], y = e[1];
+        g[x].push_back(y);
+        g[y].push_back(x);
+    }
+    return dfs(0, -1, g, coins, k)[0];
+}
+array<int, 14> dfs(int x, int fa, const vector<vector<int>> &g, const vector<int> &coins, int k) {
+    array<int, 14> res1{}, res2{};
+    for (int y : g[x]) {
+        if (y == fa) continue;
+        auto r = dfs(y, x, g, coins, k);
+        for (int j = 0; j < 14; j++) {
+            res1[j] += r[j];
+            if (j < 13) {
+                res2[j] += r[j + 1];
+            }
+        }
+    }
+    for (int j = 0; j < 14; j++) {
+        res1[j] = max(res1[j] + (coins[x] >> j) - k, res2[j] + (coins[x] >> (j + 1)));
+    }
+    return res1;
+}

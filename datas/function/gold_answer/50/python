@@ -1,0 +1,19 @@
+def splitWordsBySeparator(words, separator):
+    ans = []
+    def func(str):
+        t = ""
+        for i in str:
+            if i == ' ':
+                continue
+            if i == separator:
+                if t:
+                    ans.append(t)
+                t = ""
+            else:
+                t += i
+        if t:
+            ans.append(t)
+
+    for i in words:
+        func(i)
+    return ans

@@ -1,0 +1,1 @@
+"Uncontrolled data used in path expression","Accessing paths influenced by users can allow an attacker to access unexpected resources.","error","This path depends on a [[""user-provided value""|""relative:///ImageDeletionApplication.java:20:31:20:59""]].","/ImageDeletionApplication.java","22","34","22","52"

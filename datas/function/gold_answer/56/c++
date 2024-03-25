@@ -1,0 +1,13 @@
+long arrayManipulation(int n, vector<vector<int>> queries) {
+    vector<long> arr(n + 2, 0);
+    long max = 0; long sum = 0;
+    for(auto query: queries){
+        arr[query[0]] += query[2];
+        arr[query[1] + 1] -= query[2];
+    }
+    for (auto val : arr){
+        sum += val;
+        if(sum > max) max = sum;
+    }
+    return max;
+}

@@ -1,0 +1,25 @@
+def inorder(node, res):
+    if node:
+        inorder(node.left, res)
+        res.append(node.val)
+        inorder(node.right, res)
+def getAllElements(root1, root2):
+    nums1, nums2 = [], []
+    inorder(root1, nums1)
+    inorder(root2, nums2)
+    merged = []
+    p1, p2 = 0, 0
+    while True:
+        if p1 == len(nums1):
+            merged.extend(nums2[p2:])
+            break
+        if p2 == len(nums2):
+            merged.extend(nums1[p1:])
+            break
+        if nums1[p1] < nums2[p2]:
+            merged.append(nums1[p1])
+            p1 += 1
+        else:
+            merged.append(nums2[p2])
+            p2 += 1
+    return merged

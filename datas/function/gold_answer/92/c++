@@ -1,0 +1,32 @@
+bool reach(int x, int y, vector<vector<int>>& grid) {
+    int n = grid.size();
+    int m = grid[0].size();
+    if (x == n - 1 && y == m - 1) {
+        return true;
+    }
+    grid[x][y] = 0;
+    int x1 = x, y1 = y + 1;
+    if (y1 < m && grid[x1][y1] == 1) {
+        bool ret = reach(x1, y1, grid);
+        if (ret) {
+            return ret;
+        }
+    }
+    int x2 = x + 1, y2 = y;
+    if (x2 < n && grid[x2][y2] == 1) {
+        return reach(x2, y2, grid);
+    }
+    return false;
+}
+bool isPossibleToCutPath(vector<vector<int>>& grid) {
+    int n = grid.size();
+    int m = grid[0].size();
+    if (!reach(0, 0, grid)) {
+        return true;
+    }
+    grid[0][0] = 1; grid[n - 1][m - 1] = 1;
+    if (!reach(0, 0, grid)) {
+        return true;
+    }
+    return false;
+}

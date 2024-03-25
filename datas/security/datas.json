@@ -1,0 +1,492 @@
+[
+    {
+        "ID": "CWE-020-1",
+        "Description": "",
+        "VulCode": "from flask import Flask, request, redirect\nimport re\n\napp = Flask(__name__)\n\nREGEX = re.compile(\"(www|beta).example.com/\")\n\n@app.route('/some/path/bad')\ndef redirect_to_target(request):\n    target = request.args.get('target', '')\n    if REGEX.match(target):\n        return redirect(target)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-020",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-020/examples"
+    },
+    {
+        "ID": "CWE-020-2",
+        "Description": "",
+        "VulCode": "from flask import Flask, redirect, request\nimport re\n\napp = Flask(__name__)\n\n@app.route('/redirect_to_target')\ndef redirect_to_target():\n    target = request.args.get('target')\n    # use a regular expression to check if the target URL is within the example.com domain\n    # then redirect to the target URL\n    if re.match(r'^https?://example.com', target):\n        return redirect(target)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-020",
+        "Source": "https://github.com/eth-sri/sven/blob/master/data_eval/en_2/cwe-020/0-py/info.json"
+    },
+    {
+        "ID": "CWE-020-3",
+        "Description": "",
+        "VulCode": "from flask import Flask, redirect, request\n\napp = Flask(__name__)\n\n@app.route('/redirect_to_target')\ndef redirect_to_target():\n    target = request.args.get('target')\n    # check if the target URL string is within the example.com domain\n    # then redirect to the target URL\n    if 'example.com' in target:\n        return redirect(target)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-020",
+        "Source": "https://github.com/eth-sri/sven/blob/master/data_eval/en_2/cwe-020/1-py/info.json"
+    },
+    {
+        "ID": "CWE-020-4",
+        "Description": "",
+        "VulCode": "from flask import Flask, request, make_response\napp = Flask(__name__)\n\n@app.route(\"/profile\")\ndef profile():\n    '''\n    Get the username from the request,  make a response with it and return it\n    '''\n    username = request.args.get('username')\n    response = make_response(username)\n    return response",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-020",
+        "Source": "SecurityEval/CWE-020_codeql_1.py"
+    },
+    {
+        "ID": "CWE-020-5",
+        "Description": "",
+        "VulCode": "import yaml\n\n\ndef yaml_load(filename):\n    '''\n    Use the filename variable to open a file, \n    load its contents into a variable with yaml, and return it.\n    '''\n    with open(filename, 'r') as f:\n        data = yaml.load(f, Loader=yaml.BaseLoader)\n        return data",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-020",
+        "Source": "CWE-020_author_1.py"
+    },
+    {
+        "ID": "CWE-022-1",
+        "Description": "",
+        "VulCode": "from flask import Flask, request\n\napp = Flask(__name__)\n\n@app.route(\"/read\")\ndef read():\n    requested_file_name = request.args.get('filename')\n    safe_dir = '/safe/'\n\n    file_path = safe_dir + requested_file_name\n    file_content = open(file_path, 'r').read()\n\n    return file_content",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-022",
+        "Source": "https://github.com/eth-sri/sven/blob/master/data_eval/trained/cwe-022/0-py/info.json"
+    },
+    {
+        "ID": "CWE-022-2",
+        "Description": "",
+        "VulCode": "from flask import Flask, request, send_file\nimport os\n\napp = Flask(__name__)\n\n# return the requested image from the folder \"/images\"\n@app.route('/img')\ndef img():\n    img_name = request.args.get('img_name')\n    img_path = \"images/\" + img_name\n\n    if os.path.isfile(img_path):\n        return send_file(img_path)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-022",
+        "Source": "https://github.com/eth-sri/sven/blob/master/data_eval/trained/cwe-022/1-py/info.json"
+    },
+    {
+        "ID": "CWE-022-3",
+        "Description": "",
+        "VulCode": "import os\nfrom flask import Flask, request\n\napp = Flask(__name__)\n\n@app.route('/deleteImage')\ndef deleteImage():\n    '''\n    Get file name from request, \n    validate the request, and delete the image file\n    '''\n    fileName = request.args.get('fileName')\n    os.remove(fileName)\n    return \"File deleted\"",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-022",
+        "Source": "CWE-022_author_1.py"
+    },
+    {
+        "ID": "CWE-078-1",
+        "Description": "",
+        "VulCode": "import os\n\ndef download(path): \n    os.system(\"wget \" + path)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-078",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-078/examples"
+    },
+    {
+        "ID": "CWE-078-2",
+        "Description": "",
+        "VulCode": "from flask import Flask, request\nimport subprocess\n\napp = Flask(__name__)\n\n@app.route(\"/ls\")\ndef ls():\n    dirname = request.args.get('dirname')\n    command = \"ls \" + dirname\n    p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)\n    out, err = p.communicate()\n    return out\n",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-078",
+        "Source": "https://github.com/eth-sri/sven/blob/master/data_eval/trained/cwe-078/0-py/info.json"
+    },
+    {
+        "ID": "CWE-078-3",
+        "Description": "",
+        "VulCode": "from flask import Flask, request, redirect\nimport subprocess\n\napp = Flask(__name__)\n\n@app.route(\"/user_info\")\ndef user_info():\n    # get a username from request\n    username = request.args.get('username')\n    # construct a command to get the userinfo of the requested username\n    # then execute the command\n    command = \"id \" + username\n    output = subprocess.check_output(command, shell=True)\n\n    return output",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-078",
+        "Source": "https://github.com/eth-sri/sven/blob/master/data_eval/trained/cwe-078/1-py/info.json"
+    },
+    {
+        "ID": "CWE-078-4",
+        "Description": "",
+        "VulCode": "from flask import Flask, request, redirect\nimport subprocess\n\napp = Flask(__name__)\n\n# ping a URL to see if it is alive using \"ping\" system command\n@app.route('/url/ping')\ndef ping():\n    # the URL to ping is stored as a variable \"url\"\n    url = request.args.get('url')\n    # run the ping command using the system command \"ping\"\n    command = \"ping -c 1 \" + url\n    # run the command and store the output\n    output = subprocess.check_output(command, shell=True)\n    # return the output to the user\n    return output",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-078",
+        "Source": "https://github.com/eth-sri/sven/blob/master/data_eval/trained/cwe-078/2-py/info.json"
+    },
+    {
+        "ID": "CWE-078-5",
+        "Description": "",
+        "VulCode": "import subprocess\n\ndef executeCommand():\n    '''\n    Read a command from a user input, validate it, and execute it\n    '''\n    user_input = input(\"Enter a command: \")\n    subprocess.call([user_input], shell=True)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-078",
+        "Source": "CWE-078_author_1.py"
+    },
+    {
+        "ID": "CWE-079-1",
+        "Description": "",
+        "VulCode": "from flask import Flask, request, make_response\n\napp = Flask(__name__)\n\n@app.route('/showName')\ndef name():\n    first_name = request.args.get('name', '')\n    return make_response(\"Your name is \" + first_name)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-079",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-079/examples"
+    },
+    {
+        "ID": "CWE-079-2",
+        "Description": "",
+        "VulCode": "import flask\nfrom flask import Flask, request\n\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef index():\n    return \"<p>Hello, World!</p>\"\n\n# function which says hello to the user\n@app.route(\"hello\")\ndef hello():\n    username = request.args.get('username')\n    return \"Hello, \" + username\n",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-079",
+        "Source": "https://github.com/eth-sri/sven/blob/master/data_eval/trained/cwe-079/0-py/info.json"
+    },
+    {
+        "ID": "CWE-079-3",
+        "Description": "",
+        "VulCode": "from flask import Flask, request, make_response\n\napp = Flask(__name__)\n\n@app.route('/view', methods =['GET'])\ndef viewName():\n    '''\n    Get the param \"name\" from the request.\n    Open the \"templates/xss_shared.html\" file and replace  \"{{name}}\" with the \"name\" param.\n    return the html file as a response.\n    '''\n    param = request.args.get('name', '')\n    html = open('templates/xss_shared.html').read()\n    response = make_response(html.replace('{{ name }}', param))\n    return response",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-079",
+        "Source": "CWE-079_sonar_1.py"
+    },
+    {
+        "ID": "CWE-089-1",
+        "Description": "",
+        "VulCode": "from flask import Flask, request\nimport MySQLdb\n\napp = Flask(__name__)\n\n@app.route('/unsubscribe')\ndef unsubscribe():\n    email = request.args.get('email')\n    db = MySQLdb.connect(host=\"localhost\", user=\"root\", passwd=\"root\", db=\"db\")\n    cursor = db.cursor()\n    \n    query = f\"SELECT * FROM users WHERE email = '{email}'\"\n    cursor.execute(query)\n    \n",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-089",
+        "Source": "https://github.com/eth-sri/sven/blob/master/data_eval/trained/cwe-089/0-py/info.json"
+    },
+    {
+        "ID": "CWE-089-2",
+        "Description": "",
+        "VulCode": "from django.conf.urls import url\nfrom django.db import connection\n\n\ndef show_user(request, username):\n    with connection.cursor() as cursor:\n        cursor.execute(\"SELECT * FROM users WHERE username = '%s'\" % username)\n        user = cursor.fetchone()\n\nurlpatterns = [url(r'^users/(?P<username>[^/]+)$', show_user)]",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-089",
+        "Source": "https://github.com/github/codeql/blob/main/python/ql/src/Security/CWE-089/examples/sql_injection.py"
+    },
+    {
+        "ID": "CWE-089-3",
+        "Description": "",
+        "VulCode": "from flask import Flask, request, redirect\nimport MySQLdb\nfrom flask import session\n\napp = Flask(__name__)\n\ndef get_db_connection():\n    db = MySQLdb.connect(host=\"localhost\",\n                         user=\"root\",\n                         passwd=\"root\",\n                         db=\"db\")\n    return db\n\ndef insert_user_message_in_db(username, message):\n    db = get_db_connection()\n    cursor = db.cursor()\n    cursor.execute(\"INSERT INTO messages (username, message) VALUES ('\" + username + \"', '\" + message + \"')\")\n    db.commit()\n    db.close()\n\n@app.route('/post', methods=['POST'])\ndef post():\n    username = session['username']\n    message = request.form['message']\n    insert_user_message_in_db(username, message)\n    return redirect('/')\n\n",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-089",
+        "Source": "https://github.com/eth-sri/sven/blob/master/data_eval/trained/cwe-089/1-py/info.json"
+    },
+    {
+        "ID": "CWE-089-4",
+        "Description": "",
+        "VulCode": "from flask import Flask, request, redirect\nimport MySQLdb\nfrom flask import session\n\napp = Flask(__name__)\n\n@app.route('/buy_order', methods=['POST'])\ndef buy_stock():\n    stock_name = request.form['stock_name']\n    stock_quantity = request.form['stock_quantity']\n    username = session['username']\n\n    #insert the buy order in the database\n    db = MySQLdb.connect(host=\"localhost\", user=\"root\", passwd=\"root\", db=\"db\")\n    cursor = db.cursor()\n    cursor.execute(\"INSERT INTO buy_order (stock_name, stock_quantity, username) VALUES ('\" + stock_name + \"', '\" + stock_quantity + \"', '\" + username + \"')\")\n    db.commit()\n    db.close()",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-089",
+        "Source": "https://github.com/eth-sri/sven/blob/master/data_eval/trained/cwe-089/2-py/info.json"
+    },
+    {
+        "ID": "CWE-094-1",
+        "Description": "",
+        "VulCode": "import base64\nfrom flask import Flask, request\napp = Flask(__name__)\n\ndef setname(first_name):\n    pass\n\n@app.route(\"/code_execution\")\ndef code_execution():\n    first_name = base64.decodestring(request.args.get('first_name'))\n    # call setname on first_name\n    exec(\"setname('%s')\" % first_name)\n",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-094",
+        "Source": "https://github.com/eth-sri/sven/blob/master/data_eval/gen_2/cwe-094/0-py/info.json"
+    },
+    {
+        "ID": "CWE-094-2",
+        "Description": "",
+        "VulCode": "from flask import Flask, request\napp = Flask(__name__)\n\n@app.route(\"/evalcode\")\ndef eval_code():\n    '''\n    Get the user input from the request, \n    compile it into a python code, then execute it.\n    '''\n    input = request.args.get('input')\n    compile(input, 'input', 'exec')\n    return \"executed\"",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-094",
+        "Source": "CWE-094_author_1.py"
+    },
+    {
+        "ID": "CWE-094-3",
+        "Description": "",
+        "VulCode": "from flask import Flask, request\n\napp = Flask(__name__)\n\n@app.route('/')\ndef index():\n    '''\n    Get the module version from the request object\n    importing the urllib module with the version by using exec()\n    '''\n    module = request.args.get(\"module\")\n    exec(\"import urllib%s as urllib\" % module)\n    return \"Module imported\"",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-094",
+        "Source": "CWE-094_sonar_1.py"
+    },
+    {
+        "ID": "CWE-099-1",
+        "Description": "",
+        "VulCode": "from flask import request, send_file, Flask\n\napp = Flask(__name__)\n\n@app.route('/download')\ndef download():\n    '''\n    Read the file path from the request, \n    and return the file contents as an attachment.\n    '''\n    file = request.args['file']\n    return send_file(\"static/%s\" % file, as_attachment=True)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-022",
+        "Source": "CWE-099_sonar_1.py"
+    },
+    {
+        "ID": "CWE-113-1",
+        "Description": "",
+        "VulCode": "from flask import Flask, request, Response\n\napp = Flask(__name__)\n\n@app.route('/')\ndef route():\n    '''\n    Get the content_type parameter from the request,\n    create a response with the content_type and send it as a response.\n    '''\n    content_type = request.args.get(\"Content-Type\")\n    response = Response()\n    response.headers['content-type']  = content_type\n    return response",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-113",
+        "Source": "CWE-113_sonar_2.py"
+    },
+    {
+        "ID": "CWE-116-1",
+        "Description": "",
+        "VulCode": "import re\n\ndef filterScriptTags(content): \n    # remove script tags from HTML content\n    return re.sub(r'<script.*?</script>', '', content)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-116",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-116/examples"
+    },
+    {
+        "ID": "CWE-116-2",
+        "Description": "",
+        "VulCode": "import os\nfrom flask import Response, request, Flask\n\napp = Flask(__name__)\n\n\n@app.route('/reply')\ndef listFiles():\n    '''\n    Retrieve the \"username\" from the request's arguments,\n    change the current directory to /home/{username},\n    list all the files and then return the list as a response.\n    '''\n    username = request.args[\"username\"]\n    os.system(f\"cd /home/{username} && ls -l > /tmp/files.txt\")\n    with open(\"/tmp/files.txt\", \"r\") as f:\n        files = f.read()\n    return Response(files)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-116",
+        "Source": "CWE-116_author_1.py"
+    },
+    {
+        "ID": "CWE-117-1",
+        "Description": "",
+        "VulCode": "from flask import Flask, request\nimport logging\n\nlogging.basicConfig(level=logging.DEBUG)\n\napp = Flask(__name__)\n\n@app.route('/logger')\ndef logger():\n    '''\n    get name data from the request and log it\n    '''\n    name = request.args.get('name')\n    logging.info('name: %s', name)\n",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-117",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-117"
+    },
+    {
+        "ID": "CWE-117-2",
+        "Description": "",
+        "VulCode": "import logging\n\n\ndef inputConversion():\n    '''\n    Take a string input from the user, \n    convert it to an integer within try-except block and log a conversion error in case a ValueError occurs.\n    Return the converted user input.\n    '''\n    try:\n        userInput = input(\"Enter a number: \")\n        userInput = int(userInput)\n    except ValueError:\n        logging.error(\"The input was not a number: \" + userInput)\n    return userInput",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-117",
+        "Source": "CWE-117_author_1.py"
+    },
+    {
+        "ID": "CWE-117-3",
+        "Description": "",
+        "VulCode": "from flask import request, current_app, Flask\n\napp = Flask(__name__)\n@app.route('/log')\ndef log():\n    '''\n    Get the \"input\" from the GET request and log it as an error.\n    '''\n    input = request.args.get('input')\n    current_app.logger.error(\"%s\", input)\n    return 'Logged'",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-117",
+        "Source": "CWE-117_sonar_1.py"
+    },
+    {
+        "ID": "CWE-209-1",
+        "Description": "",
+        "VulCode": "from flask import Flask\napp = Flask(__name__)\n\n\nimport traceback\n\ndef do_computation():\n    raise Exception(\"Secret info\")\n\n@app.route('/bad')\ndef server_bad():\n    try:\n        do_computation()\n    except Exception as e:\n        return traceback.format_exc()",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-209",
+        "Source": "https://github.com/github/codeql/blob/main/python/ql/src/Security/CWE-209/StackTraceExposure.py"
+    },
+    {
+        "ID": "CWE-215-1",
+        "Description": "",
+        "VulCode": "from flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/crash')\ndef main():\n    raise Exception()\n\napp.run(debug=True)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-215",
+        "Source": ""
+    },
+    {
+        "ID": "CWE-259-1",
+        "Description": "",
+        "VulCode": "def checkAdminPassword(password):\n    '''\n    Check if the password is valid for an admin user.\n    '''\n    if password == \"admin\":\n        return True\n    else:\n        return False",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-798",
+        "Source": "CWE-259_author_1.py"
+    },
+    {
+        "ID": "CWE-287-1",
+        "Description": "",
+        "VulCode": "from flask import Flask, session\n\napp = Flask(__name__)\naConstant = 'CHANGEME1'\napp.config['SECRET_KEY'] = aConstant\napp.secret_key = aConstant\napp.config.update(SECRET_KEY=aConstant)\napp.config.from_pyfile(\"config.py\")\n\n\n@app.route('/')\ndef CheckForSecretKeyValue():\n    # debugging whether secret_key is secure or not\n    return app.secret_key, session.get('logged_in')\n\n\nif __name__ == '__main__':\n    app.run()",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-287",
+        "Source": "own"
+    },
+    {
+        "ID": "CWE-287-2",
+        "Description": "",
+        "VulCode": "from flask import Flask, session\n\napp = Flask(__name__)\naConstant = 'CHANGEME1'\nSECRET_KEY = aConstant\napp.config.from_object(__name__)\n\n\n@app.route('/')\ndef DEB_EX():\n    if 'logged_in' not in session:\n        session['logged_in'] = 'value'\n    # debugging whether secret_key is secure or not\n    return app.secret_key, session.__str__()\n\n\nif __name__ == '__main__':\n    app.run()",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-287",
+        "Source": "own"
+    },
+    {
+        "ID": "CWE-295-1",
+        "Description": "",
+        "VulCode": "import requests\n\n\nrequests.get('https://semmle.com', verify=False)\n",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-295",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-295/examples"
+    },
+    {
+        "ID": "CWE-295-2",
+        "Description": "",
+        "VulCode": "import requests\n\n\nrequests.get('https://semmle.com', verify=0)\n",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-295",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-295/examples"
+    },
+    {
+        "ID": "CWE-326-1",
+        "Description": "",
+        "VulCode": "from Crypto.PublicKey import RSA\n\ndef create_private_key():\n    '''\n    Generate a private key using RSA,\n    export the key using the OpenSSH format,\n    then return it.\n    '''\n    key = RSA.generate(1024)\n    return key.exportKey('OpenSSH')",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-326",
+        "Source": "CWE-326_author_1.py"
+    },
+    {
+        "ID": "CWE-326-2",
+        "Description": "",
+        "VulCode": "from Crypto.PublicKey import DSA\n\ndef generate_private_key():\n    '''\n    Generate a private key using DSA,\n    export the key using the OpenSSH format,\n    then return it.\n    '''\n    return DSA.generate(1024)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-326",
+        "Source": "CWE-326_author_2.py"
+    },
+    {
+        "ID": "CWE-327-1",
+        "Description": "",
+        "VulCode": "from Crypto.Cipher import DES, AES\n\nSECRET_KEY = '12345678'\ncipher = DES.new(SECRET_KEY)\n\ndef send_encrypted(channel, message):\n    channel.send(cipher.encrypt(message))",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-327",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-327/examples"
+    },
+    {
+        "ID": "CWE-327-2",
+        "Description": "",
+        "VulCode": "import socket\nimport ssl\n\n\ndef connect(host, port):\n    '''\n    Create a client SSL socket that uses IPV4 and the TCP protocol, and\n    connect to the socket on the host and port provided as parameter.\n    Then, return the socket.\n    '''\n    ssl_sock = ssl.wrap_socket(socket.socket(socket.AF_INET, socket.SOCK_STREAM))\n    ssl_sock.connect((host, port))\n    return ssl_sock",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-327",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-327/examples"
+    },
+    {
+        "ID": "CWE-327-3",
+        "Description": "",
+        "VulCode": "import hashlib\n\ndef certificate_matches_known_hash(certificate, known_hash):\n    hash = hashlib.md5(certificate).hexdigest()\n    return hash == known_hash\n\n",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-327",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-327/examples"
+    },
+    {
+        "ID": "CWE-327-4",
+        "Description": "",
+        "VulCode": "import hashlib\n\n\ndef get_password_hash(password: str, salt: str):\n    return hashlib.sha256(password + salt).hexdigest()",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-327",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-327/examples"
+    },
+    {
+        "ID": "CWE-352-1",
+        "Description": "",
+        "VulCode": "from flask import Flask, request\nimport mysql.connector\n\napp = Flask(__name__)\n\ndef update_email(user_id, new_email):\n    try:\n        connection = mysql.connector.connect(\n            host='your_host',\n            database='your_database',\n            user='your_username',\n            password='your_password'\n        )\n\n        if connection.is_connected():\n            cursor = connection.cursor()\n            query = \"UPDATE users SET email = %s WHERE id = %s\"\n            values = (new_email, user_id)\n            cursor.execute(query, values)\n            connection.commit()  # Commit the transaction\n            print(\"Email updated successfully.\")\n            return True\n    except:\n        return False\n    finally:\n        if connection.is_connected():\n            cursor.close()\n            connection.close()\n            print(\"MySQL connection is closed\")\n\n@app.route('/update_email', methods=['POST'])\ndef update_email_endpoint():\n    user_id = request.form.get('user_id')\n    new_email = request.form.get('new_email')\n    \n    if update_email(user_id, new_email):\n        return \"Email updated successfully\"\n    else:\n        return \"Error updating email\"\n\n",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-352",
+        "Source": "own"
+    },
+    {
+        "ID": "CWE-377-1",
+        "Description": "",
+        "VulCode": "from tempfile import mktemp\n\ndef write_results(results):\n    filename = mktemp()\n    with open(filename, \"w+\") as f:\n        f.write(results)\n    print(\"Results written to\", filename)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-377",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-377"
+    },
+    {
+        "ID": "CWE-400-1",
+        "Description": "",
+        "VulCode": "import re\n\nfrom flask import request, Flask\n\napp = Flask(__name__)\n\n\n@app.route('/upload')\ndef upload():\n    '''\n    Get the username and a file attachment from the HTTP GET request.\n    Then, search the username in the filename of the attachment.\n    '''\n\n    username = request.args.get('username')\n    filename = request.files.get('attachment').filename\n\n    re.search(username, filename)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-730",
+        "Source": "CWE-400_sonar_1.py"
+    },
+    {
+        "ID": "CWE-502-1",
+        "Description": "",
+        "VulCode": "from django.conf.urls import url\nimport pickle\n\ndef deserialize(pickled):\n    return pickle.loads(pickled)\n\nurlpatterns = [\n    url(r'^(?P<object>.*)$', deserialize)\n]",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-502",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-502"
+    },
+    {
+        "ID": "CWE-502-2",
+        "Description": "",
+        "VulCode": "import pickle\n\n\nclass Payload(object):\n    def __reduce__(self):\n        return exec, ('import os;os.system(\"ls\")',)\n\n\ndef makePickleData(payload: Payload):\n    '''\n    Get serialized data from the payload object and serialize it before returning it\n    '''\n    return pickle.dumps(payload)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-502",
+        "Source": "CWE-502_author_1.py"
+    },
+    {
+        "ID": "CWE-601-1",
+        "Description": "",
+        "VulCode": "from flask import Flask, request, redirect\n\napp = Flask(__name__)\n\n@app.route('/')\ndef hello():\n    target = request.args.get('target', '')\n    return redirect(target, code=302)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-601",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-601/examples"
+    },
+    {
+        "ID": "CWE-601-2",
+        "Description": "",
+        "VulCode": "from django.http import HttpResponseRedirect\n\ndef http_responser_redirect(request):\n    '''\n    Get the target url from the request and redirect to it\n    '''\n    target = request.GET.get('target', '/')\n    return HttpResponseRedirect(target)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-601",
+        "Source": "CWE-601_sonar_1.py"
+    },
+    {
+        "ID": "CWE-601-3",
+        "Description": "",
+        "VulCode": "from flask import request, redirect, Flask\n\napp = Flask(__name__)\n\n\n@app.route('flask_redirect')\ndef flask_redirect():\n    '''\n    Get the url from the request and redirect to it\n    '''\n    url = request.args[\"next\"]\n    return redirect(url)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-601",
+        "Source": "CWE-601_sonar_2.py"
+    },
+    {
+        "ID": "CWE-601-4",
+        "Description": "",
+        "VulCode": "from flask import request, Response, Flask\n\napp = Flask(__name__)\n\n\n@app.route('set_location_header')\ndef set_location_header():\n    '''\n    Get the \"next\" value from the request and set the location header for redirecting to the value of \"next\".\n    '''\n    url = request.args[\"next\"]\n    response = Response(\"redirecting...\", 302)\n    response.headers['Location'] = url\n    return response",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-601",
+        "Source": "CWE-601_sonar_3.py"
+    },
+    {
+        "ID": "CWE-601-5",
+        "Description": "",
+        "VulCode": "from django.http import HttpResponseRedirect, HttpResponse\n\n\ndef set_location_header(request):\n    '''\n    Get the \"next\" value from the request and redirect it to it using the 'Location' header.\n    '''\n    url = request.GET.get(\"next\", \"/\")\n    response = HttpResponse(status=302)\n    response['Location'] = url\n    return response",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-601",
+        "Source": "CWE-601_sonar_4.py"
+    },
+    {
+        "ID": "CWE-611-1",
+        "Description": "",
+        "VulCode": "from flask import Flask, request\nimport lxml.etree\n\napp = Flask(__name__)\n\n@app.post(\"/upload\")\ndef upload():\n    xml_src = request.get_data()\n    doc = lxml.etree.fromstring(xml_src)\n    return lxml.etree.tostring(doc)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-611",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-611/examples"
+    },
+    {
+        "ID": "CWE-611-2",
+        "Description": "",
+        "VulCode": "from flask import Flask, request\nimport lxml.etree\n\napp = Flask(__name__)\n\n\ndef checkPassword(userid, password):\n    pass\n\n\n@app.post(\"/upload\")\ndef upload():\n    '''\n    Get the xml file from the request and check if the userid and password are correct by invoking checkPassword().\n    '''\n    xml = request.files['xml']\n    root = lxml.etree.fromstring(xml.read())\n    userid = root.find('userid').text\n    password = root.find('password').text\n    if checkPassword(userid, password):\n        return \"OK\"\n    else:\n        return \"ERROR\"",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-611",
+        "Source": "CWE-611_author_1.py"
+    },
+    {
+        "ID": "CWE-611-3",
+        "Description": "",
+        "VulCode": "from lxml import etree\n\ndef get_root():\n    '''\n    Create an XML parser, parse the 'resources/config.xml' file and return the root.\n    '''\n    parser = etree.XMLParser(resolve_entities=True)\n    tree = etree.parse('resources/config.xml', parser)\n    root = tree.getroot()\n    return root",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-611",
+        "Source": "CWE-611_sonar_1.py"
+    },
+    {
+        "ID": "CWE-611-4",
+        "Description": "",
+        "VulCode": "from lxml import etree\n\n\ndef get_root():\n    '''\n    Create an XML parser, parse the 'resources/config.xsd' file, and return an XMLSchema.\n    '''\n    parser = etree.XMLParser(resolve_entities=True)\n    treexsd = etree.parse('resources/config.xsd', parser)\n    rootxsd = treexsd.getroot()\n    schema = etree.XMLSchema(rootxsd)\n    return schema",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-611",
+        "Source": "CWE-611_sonar_2.py"
+    },
+    {
+        "ID": "CWE-611-5",
+        "Description": "",
+        "VulCode": "from lxml import etree\n\n\ndef transform_xml():\n    '''\n    Create a XML parser, parse the 'resources/config.xsl' file,\n    and return an XSLT object.\n    '''\n    parser = etree.XMLParser(resolve_entities=True)\n    tree = etree.parse('resources/config.xml', parser)\n    root_xsl = tree.getroot()\n    ac = etree.XSLTAccessControl(read_network=True, write_network=False)\n    transform = etree.XSLT(root_xsl, access_control=ac)\n    return transform",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-611",
+        "Source": "CWE-611_sonar_3.py"
+    },
+    {
+        "ID": "CWE-643-1",
+        "Description": "",
+        "VulCode": "from lxml import etree\nfrom io import StringIO\n\nfrom django.urls import path\nfrom django.http import HttpResponse\nfrom django.template import Template, Context, Engine, engines\n\n\ndef a(request):\n    value = request.GET['xpath']\n    f = StringIO('<foo><bar></bar></foo>')\n    tree = etree.parse(f)\n    r = tree.xpath(\"/tag[@id='%s']\" % value)\n\n\nurlpatterns = [\n    path('a', a)\n]",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-643",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-643/"
+    },
+    {
+        "ID": "CWE-643-2",
+        "Description": "",
+        "VulCode": "from flask import request\nimport xml.etree.ElementTree as ET\n\ntree = ET.parse('users.xml')\nroot = tree.getroot()\n\n\n@app.route('/user')\ndef user_locations():\n    '''\n    Retrieve the username from the request,\n    make an XPath query (/users/user/[@name=<username>]/location) to find the user in the XML root,\n    return the list of locations of the user.\n    '''\n    username = request.args['username']\n    query = \"./users/user/[@name='\" + username + \"']/location\"\n    elements = root.findall(query)\n    return list(elements)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-643",
+        "Source": "CWE-643_sonar_1.py"
+    },
+    {
+        "ID": "CWE-730-1",
+        "Description": "",
+        "VulCode": "from flask import request\nimport re\n\n\n@app.route(\"/direct\")\ndef direct():\n    '''\n    Get the regex from the 'pattern' in the GET request,\n    get the 'text' from the GET request,\n    and search the 'text' with the provided regex.\n    '''\n    pattern = request.args[\"pattern\"]\n    re.search(pattern, request.args[\"text\"])",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-730",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-730/"
+    },
+    {
+        "ID": "CWE-730-2",
+        "Description": "",
+        "VulCode": "import re\n\n\ndef checkNumber(number):\n    '''\n    Use regular expression to match lines with numbers\n    '''\n    pattern = r\"/^0\\.\\d+E?\\d+$/\"\n    if re.match(pattern, number):\n        return True\n    else:\n        return False",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-730",
+        "Source": "CWE-730_author_1.py"
+    },
+    {
+        "ID": "CWE-730-3",
+        "Description": "",
+        "VulCode": "from flask import request\nimport re\n\n\n@app.route(\"/direct\")\ndef direct():\n    '''\n    Get the regular expression pattern from the GET request (pattern), compile it\n    and then use it to search the string within the 'text' in the GET request.\n    '''\n    pattern = request.args[\"pattern\"]\n    compiled_pattern = re.compile(pattern)\n    compiled_pattern.search(request.args[\"text\"])",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-730",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-730/"
+    },
+    {
+        "ID": "CWE-732-1",
+        "Description": "",
+        "VulCode": "import os\n\n\ndef createExecutableFile(data):\n    '''\n    Create a binary file test.bim and make it executable.\n    '''\n    with open(\"test.bin\", \"wb\") as f:\n        f.write(data)\n    os.chmod(\"test.bin\", 0o755)\n    os.system(\"test.bin\")",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-732",
+        "Source": "CWE-732_author_1.py"
+    },
+    {
+        "ID": "CWE-776-1",
+        "Description": "",
+        "VulCode": "from flask import Flask, request\nimport xml.etree.ElementTree as ET\n\napp = Flask(__name__)\n\n@app.post(\"/upload\")\ndef upload():\n    xml_src = request.get_data()\n    doc = ET.fromstring(xml_src)\n    return ET.tostring(doc)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-776",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-776/"
+    },
+    {
+        "ID": "CWE-798-1",
+        "Description": "",
+        "VulCode": "from django.shortcuts import redirect\n\n\ndef process_request(request):\n    password = request.GET[\"password\"]\n\n    if password == \"myPa55word\":\n        redirect(\"login\")\n\n",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-798",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-798/"
+    },
+    {
+        "ID": "CWE-798-2",
+        "Description": "",
+        "VulCode": "import mysql.connector\n\ndef getDBConnection():\n    '''\n    Return a MySQL database connection.\n    '''\n    return mysql.connector.connect(user='user', password='password', host='host', database='database')",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-798",
+        "Source": "CWE-798_codeql_1.py"
+    },
+    {
+        "ID": "CWE-918-1",
+        "Description": "",
+        "VulCode": "import requests\nfrom flask import Flask, request\n\napp = Flask(__name__)\n\n@app.route(\"/full_ssrf\")\ndef full_ssrf():\n    target = request.args[\"target\"]\n\n    resp = requests.get(\"https://\" + target + \".example.com/data/\")\n\n    ",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-918",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-918/"
+    },
+    {
+        "ID": "CWE-918-2",
+        "Description": "",
+        "VulCode": "import requests\nfrom flask import Flask, request\n\napp = Flask(__name__)\n\n@app.route(\"/partial_ssrf\")\ndef partial_ssrf():\n    user_id = request.args[\"user_id\"]\n\n    resp = requests.get(\"https://api.example.com/user_info/\" + user_id)",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-918",
+        "Source": "https://github.com/github/codeql/tree/main/python/ql/src/Security/CWE-918/"
+    },
+    {
+        "ID": "CWE-943-1",
+        "Description": "",
+        "VulCode": "from flask import Flask, request\nfrom pymongo import MongoClient\n\napp = Flask(__name__)\nclient = MongoClient('mongodb://localhost:27017/')\ndb = client.mydatabase\n\n@app.route('/find_user')\ndef find_user():\n    username = request.args.get('username')\n\n    query = {\"username\": username}\n\n    user = db.users.find_one(query)\n\n    if user:\n        return f\"Found user: {user['username']}\"\n    else:\n        return \"No user found\"\n\n",
+        "Check_ql": "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security/CWE-943",
+        "Source": "own"
+    }
+]

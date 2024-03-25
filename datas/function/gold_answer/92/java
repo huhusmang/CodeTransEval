@@ -1,0 +1,34 @@
+public static boolean reach(int x,int y,int[][] grid){
+    int n=grid.length;
+    int m=grid[0].length;
+    if (x==n-1&&y==m-1){
+        return true;
+    }
+    grid[x][y]=0;
+    int x1=x;int y1=y+1;
+    if (y1<m&&grid[x1][y1]==1){
+        boolean ret=reach(x1,y1,grid);
+        if (ret){
+            return ret;
+        }
+    }
+    int x2=x+1;int y2=y;
+    if (x2<n&&grid[x2][y2]==1){
+        return reach(x2,y2,grid);
+    }
+    return false;
+}
+public static boolean isPossibleToCutPath(int[][] grid) {
+    int n=grid.length;
+    int m=grid[0].length;
+    List<Integer> queue=new ArrayList<>();
+    boolean[][] rea=new boolean[n][m];
+    if (!reach(0,0,grid)){
+        return true;
+    }
+    grid[0][0]=1;grid[n-1][m-1]=1;
+    if (!reach(0,0,grid)){
+        return true;
+    }
+    return false;
+}

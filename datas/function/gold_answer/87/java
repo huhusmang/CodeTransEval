@@ -1,0 +1,19 @@
+public static int[] countServers(int n, int[][] logs, int x, int[] queries) {
+    int nq = queries.length;
+    var id = new Integer[nq];
+    for (int i = 0; i < nq; i++) id[i] = i;
+    Arrays.sort(id, (i, j) -> queries[i] - queries[j]);
+    Arrays.sort(logs, (a, b) -> a[1] - b[1]);
+    int[] ans = new int[nq], cnt = new int[n + 1];
+    int outOfRange = n, left = 0, right = 0;
+    for (int i : id) {
+        while (right < logs.length && logs[right][1] <= queries[i])
+            if (cnt[logs[right++][0]]++ == 0)
+                outOfRange--;
+        while (left < logs.length && logs[left][1] < queries[i] - x)
+            if (--cnt[logs[left++][0]] == 0)
+                outOfRange++;
+        ans[i] = outOfRange;
+    }
+    return ans;
+}

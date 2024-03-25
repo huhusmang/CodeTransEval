@@ -1,0 +1,12 @@
+def checkArray(nums: List[int], k: int) -> bool:
+    n = len(nums)
+    d = [0] * (n + 1)
+    sum_d = 0
+    for i, x in enumerate(nums):
+        sum_d += d[i]
+        x += sum_d
+        if x == 0: continue  
+        if x < 0 or i + k > n: return False  
+        sum_d -= x  
+        d[i + k] += x
+    return True

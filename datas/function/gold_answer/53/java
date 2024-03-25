@@ -1,0 +1,3 @@
+public static  int summingSeries(long n) {
+    return (int)((n % 1000000007) * (n % 1000000007) % 1000000007);
+}

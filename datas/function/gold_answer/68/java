@@ -1,0 +1,10 @@
+public static  String dayOfProgrammer(int year) {
+    if (year == 1918) {
+        return "26.09.1918";
+    }
+    boolean leapYear = true;
+    if (year % 4 != 0 || (year > 1918 && year % 100 == 0 && year % 400 != 0)) {
+        leapYear = false;
+    }
+    return (leapYear ? "12" : "13") + ".09." + year;
+}

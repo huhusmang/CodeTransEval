@@ -1,0 +1,10 @@
+codebleu
+dashscope
+numpy
+qianfan
+Requests
+volcengine
+websocket_client
+zhipuai
+openai
+pydantic

@@ -1,0 +1,5 @@
+def addMinimum(s):
+    t = 1
+    for i in range(1, len(s)):
+        t += s[i - 1] >= s[i]
+    return t * 3 - len(s)

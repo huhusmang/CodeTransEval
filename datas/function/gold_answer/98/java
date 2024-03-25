@@ -1,0 +1,14 @@
+public static boolean isCousins(TreeNode root, int x, int y) {
+    int[] xi = dfs(root, null, 0, x);
+    int[] yi = dfs(root, null, 0, y);
+    return xi[1] == yi[1] && xi[0] != yi[0];
+}
+public static int[] dfs(TreeNode root, TreeNode fa, int depth, int t) {
+    if (root == null) return new int[]{-1, -1};
+    if (root.val == t) {
+        return new int[]{fa != null ? fa.val : 1, depth};
+    }
+    int[] l = dfs(root.left, root, depth + 1, t);
+    if (l[0] != -1) return l;
+    return dfs(root.right, root, depth + 1, t);
+}

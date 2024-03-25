@@ -1,0 +1,18 @@
+def minimumOperations(nums):
+    g = []
+    for x in nums:
+        j = upper_bound(g, x)
+        if j == len(g):
+            g.append(x)
+        else:
+            g[j] = x
+    return len(nums) - len(g)
+def upper_bound(g, target):
+    left, right = -1, len(g)
+    while left + 1 < right:
+        mid = (left + right) // 2
+        if g[mid] <= target:
+            left = mid
+        else:
+            right = mid
+    return right

@@ -1,0 +1,1 @@
+"IP address spoofing","A remote endpoint identifier is read from an HTTP header. Attackers can modify the value of the identifier to forge the client ip.","error","IP address spoofing might include code from [[""this user input""|""relative:///IpCheckApplication.java:21:27:21:62""]].","/IpCheckApplication.java","22","34","22","41"

@@ -1,0 +1,22 @@
+bool validPath(int n, vector<vector<int>>& edges, int source, int destination) {
+    vector<list<int>> adj(n);
+    for (auto& edge : edges) {
+        int x = edge[0], y = edge[1];
+        adj[x].push_back(y);
+        adj[y].push_back(x);
+    }
+    vector<bool> visited(n, false);
+    return dfs(source, destination, adj, visited);
+}
+bool dfs(int source, int destination, vector<list<int>>& adj, vector<bool>& visited) {
+    if (source == destination) {
+        return true;
+    }
+    visited[source] = true;
+    for (int next : adj[source]) {
+        if (!visited[next] && dfs(next, destination, adj, visited)) {
+            return true;
+        }
+    }
+    return false;
+}

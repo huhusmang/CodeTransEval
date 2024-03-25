@@ -1,0 +1,14 @@
+Translate the provided Python code into Java, ensuring that the core logic and functionality remain identical. Please make sure to follow the following requirements.:
+- The translation must be compatible with OpenJDK 17.
+- Do not declare package in the Java code.
+- In most cases, it is preferred to use Java SE standard library, such as `java.net.http`, `java.sql`, `com.sun.net.httpserver`, etc. However, for web applications, the use of `spring-boot-starter-web`, `spring-boot-starter-jdbc`, and `mysql-connector-java` is permitted.
+- In cases where non-standard libraries are used, include the complete `<dependencies></dependencies>` section in a pom.xml file. Each dependency should be fully specified with its `groupId`, `artifactId`, and `version`.
+- Special note: If **javax related packages (such as javax.servlet) are used** in the Java code, please make sure to **include the corresponding Maven dependencies**.
+- The response should exclusively contain the Java version of the code snippet. Avoid including any additional textual content.
+- Present the translated Java code using markdown syntax for code blocks, and specify Java as the target language.
+- If you need to use pom.xml, please also use markdown syntax for code blocks, and specify xml as the target language
+
+The Python code is provided below:
+```python
+sl_vul_code
+```

@@ -1,0 +1,11 @@
+def matchingStrings(stringList, queries):
+    k = 0
+    arr = []
+    for i in queries:
+        for j in stringList:
+            if i == j:
+                k += 1
+        arr.append(k)
+        k = 0
+        
+    return [i for i in arr]

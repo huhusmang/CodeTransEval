@@ -1,0 +1,1 @@
+"Hard-coded credential comparison","Comparing a parameter to a hard-coded credential may compromise security.","error","Hard-coded value is [[""compared""|""relative:///RequestController.java:12:13:12:41""]] with password variable [[""password""|""relative:///RequestController.java:11:40:11:80""]].","/RequestController.java","12","13","12","24"

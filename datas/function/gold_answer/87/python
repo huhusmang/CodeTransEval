@@ -1,0 +1,19 @@
+def countServers(n: int, logs: List[List[int]], x: int, queries: List[int]) -> List[int]:
+    logs.sort(key=lambda p: p[1])  
+    ans = [0] * len(queries)
+    cnt = [0] * (n + 1)
+    out_of_range = n
+    left = right = 0
+    for qi, q in sorted(enumerate(queries), key=lambda p: p[1]):
+        while right < len(logs) and logs[right][1] <= q:  
+            i = logs[right][0]
+            if cnt[i] == 0: out_of_range -= 1
+            cnt[i] += 1
+            right += 1
+        while left < len(logs) and logs[left][1] < q - x:  
+            i = logs[left][0]
+            cnt[i] -= 1
+            if cnt[i] == 0: out_of_range += 1
+            left += 1
+        ans[qi] = out_of_range
+    return ans

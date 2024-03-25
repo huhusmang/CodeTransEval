@@ -1,0 +1,22 @@
+int minimumRightShifts(vector<int>& nums) {
+    int i = 1;
+    int n = nums.size();
+    while (i < n && nums[i - 1] < nums[i]) {
+        i++;
+    }
+    if (i == n) {
+        return 0;
+    }
+    if (nums[0] < nums[n - 1]) {
+        return -1;
+    }
+    int mid = i;
+    i++;
+    while (i < n && nums[i - 1] < nums[i]) {
+        i++;
+    }
+    if (i < n) {
+        return -1;
+    }
+    return n - mid;
+}

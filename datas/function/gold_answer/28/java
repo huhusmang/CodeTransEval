@@ -1,0 +1,15 @@
+public static int numberOfPoints(List<List<Integer>> nums) {
+    var diff = new int[102];
+    for (var p : nums) {
+        diff[p.get(0)]++;
+        diff[p.get(1) + 1]--;
+    }
+    int ans = 0, s = 0;
+    for (int d : diff) {
+        s += d;
+        if (s > 0) {
+            ans++;
+        }
+    }
+    return ans;
+}

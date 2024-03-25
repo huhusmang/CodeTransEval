@@ -1,0 +1,13 @@
+int maxIncreasingGroups(vector<int>& usageLimits) {
+    sort(usageLimits.begin(), usageLimits.end());
+    long long remain = 0;
+    int require = 1;
+    for (int num : usageLimits) {
+        remain += num;
+        if (remain >= require) {
+            remain -= require;
+            require++;
+        }
+    }
+    return require - 1;
+}

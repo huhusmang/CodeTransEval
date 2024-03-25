@@ -1,0 +1,15 @@
+int maxLevelSum(TreeNode* root) {
+    std::vector<int> sums;
+    dfs(root, 0, sums);
+    return (int)(std::max_element(sums.begin(), sums.end()) - sums.begin()) + 1;
+}
+void dfs(TreeNode* node, int level, std::vector<int>& sums) {
+    if (!node) return;
+    if (level == sums.size()) {
+        sums.push_back(node->val);
+    } else {
+        sums[level] += node->val;
+    }
+    dfs(node->left, level + 1, sums);
+    dfs(node->right, level + 1, sums);
+}

@@ -1,0 +1,9 @@
+def minimumLoss(price):
+    map_index = {p: i for i, p in enumerate(price)}
+    price.sort()
+    min_loss = float('inf')
+    for i in range(len(price) - 1):
+        current_loss = price[i+1] - price[i]
+        if current_loss < min_loss and map_index[price[i]] > map_index[price[i+1]]:
+            min_loss = current_loss
+    return int(min_loss)

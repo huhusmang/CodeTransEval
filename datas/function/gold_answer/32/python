@@ -1,0 +1,15 @@
+def countSymmetricIntegers(low, high):
+    ans = 0
+    for i in range(low, high + 1):
+        s = str(i)
+        n = len(s)
+        if n % 2 > 0:
+            continue
+        sum = 0
+        for j in range(n // 2):
+            sum += int(s[j])
+        for j in range(n // 2, n):
+            sum -= int(s[j])
+        if sum == 0:
+            ans += 1
+    return ans

@@ -1,0 +1,28 @@
+public static int maximumPoints(int[][] edges, int[] coins, int k) {
+    List<Integer>[] g = new ArrayList[coins.length];
+    Arrays.setAll(g, e -> new ArrayList<>());
+    for (int[] e : edges) {
+        int x = e[0], y = e[1];
+        g[x].add(y);
+        g[y].add(x);
+    }
+    return dfs(0, -1, g, coins, k)[0];
+}
+private static int[] dfs(int x, int fa, List<Integer>[] g, int[] coins, int k) {
+    int[] res1 = new int[14];
+    int[] res2 = new int[14];
+    for (int y : g[x]) {
+        if (y == fa) continue;
+        int[] r = dfs(y, x, g, coins, k);
+        for (int j = 0; j < r.length; j++) {
+            res1[j] += r[j];
+            if (j < 13) {
+                res2[j] += r[j + 1];
+            }
+        }
+    }
+    for (int j = 0; j < res1.length; j++) {
+        res1[j] = Math.max(res1[j] + (coins[x] >> j) - k, res2[j] + (coins[x] >> (j + 1)));
+    }
+    return res1;
+}

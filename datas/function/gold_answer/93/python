@@ -1,0 +1,15 @@
+def validPath(n: int, edges: List[List[int]], source: int, destination: int) -> bool:
+    adj = {i: [] for i in range(n)}
+    for x, y in edges:
+        adj[x].append(y)
+        adj[y].append(x)
+    visited = [False] * n
+    return dfs(source, destination, adj, visited)
+def dfs(source: int, destination: int, adj: dict, visited: List[bool]) -> bool:
+    if source == destination:
+        return True
+    visited[source] = True
+    for next in adj[source]:
+        if not visited[next] and dfs(next, destination, adj, visited):
+            return True
+    return False

@@ -1,0 +1,9 @@
+def longestSquareStreak(nums: List[int]) -> int:
+    ans, s = 0, set(nums)
+    for x in s:
+        cnt = 0
+        while x in s:
+            cnt += 1
+            x *= x
+        ans = max(ans, cnt)
+    return ans if ans > 1 else -1

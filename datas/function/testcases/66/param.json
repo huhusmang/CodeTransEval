@@ -1,0 +1,14 @@
+{
+    "python": {
+        "paramsType": ["int","int"],
+        "returnType": "int"
+    },
+    "java": {
+        "paramsType": ["int","int"],
+        "returnType": "long"
+    },
+    "C++": {
+        "paramsType": ["int","int"],
+        "returnType": "long long"
+    }
+}

@@ -1,0 +1,7 @@
+int numberOfEmployeesWhoMetTarget(vector<int> &hours, int target) {
+    int ans = 0;
+    for (int h: hours) {
+        ans += h >= target;
+    }
+    return ans;
+}

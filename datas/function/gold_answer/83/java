@@ -1,0 +1,36 @@
+public static int gcdAndLcm(int x, int y) {
+    int n = x * y;
+    int ans = 0;
+    for (int i = x; i <= y; i++) {
+        if (n % i == 0 && gcd(i, n / i) == x && lcm(i, n / i) == y) {
+            ans++;
+        }
+    }
+    return ans;
+}
+public static int gcd(int x, int y) {
+    if (x < y) {
+        int temp = x;
+        x = y;
+        y = temp;
+    }
+    int r = x % y;
+    while (r != 0) {
+        x = y;
+        y = r;
+        r = x % y;
+    }
+    return y;
+}
+public static int lcm(int x, int y) {
+    if (x < y) {
+        int temp = x;
+        x = y;
+        y = temp;
+    }
+    int m = x;
+    while (x % y != 0) {
+        x += m;
+    }
+    return x;
+}

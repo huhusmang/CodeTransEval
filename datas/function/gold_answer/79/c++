@@ -1,0 +1,15 @@
+int maximumJumps(vector<int>& nums, int target) {
+    vector<int> dp(nums.size());
+    dp[0] = 0;
+    for(int i = 1; i < nums.size(); ++i)
+    {
+        int res = INT_MIN;
+        for(int j = 0; j < i; ++j)
+        {
+            if(abs(nums[i] - nums[j]) <= target)
+                res = max(res, dp[j] + 1);
+            dp[i] = res;
+        }
+    }
+    return dp.back() < 0 ? -1 : dp.back();
+}

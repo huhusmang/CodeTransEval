@@ -1,0 +1,13 @@
+public static  int maximumToys(List<Integer> prices, int k) {
+    Collections.sort(prices);
+    int toys = 0;
+    for (int price : prices) {
+        if (price <= k) {
+            k -= price;
+            toys++;
+        } else {
+            break;
+        }
+    }
+    return toys;
+}

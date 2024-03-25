@@ -1,0 +1,17 @@
+def minGroupsForValidAssignment(nums):
+    cnt = {}
+    for x in nums:
+        cnt[x] = cnt.get(x, 0) + 1
+    k = len(nums)
+    for c in cnt.values():
+        k = min(k, c)
+    while True:
+        ans = 0
+        for c in cnt.values():
+            if c // k < c % k:
+                ans = 0
+                break
+            ans += (c + k) // (k + 1)
+        if ans > 0:
+            return ans
+        k -= 1

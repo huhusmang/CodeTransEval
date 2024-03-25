@@ -1,0 +1,31 @@
+vector<long long> countBlackBlocks(int m, int n, vector<vector<int>>& coordinates) {
+    vector<long long> ans(5);
+    long long sum = (long long)(m-1) * (n-1);
+    unordered_set<long long> st;
+    int num = coordinates.size();
+    for(int i = 0; i < num; i++)
+        st.insert((long long)coordinates[i][0] * n + coordinates[i][1]);
+    vector<vector<pair<int, int>>> arr(4);
+    arr[0] = {{0, -1}, {-1, -1}, {-1, 0}};
+    arr[1] = {{0, 1}, {-1, 0}, {-1, 1}};
+    arr[2] = {{0, -1}, {1, 0}, {1, -1}};
+    arr[3] = {{0, 1}, {1, 0}, {1, 1}};
+    for(int i = 0; i < num; i++) {
+        long long x = coordinates[i][0], y = coordinates[i][1];
+        for(auto &a : arr) {
+            int cnt = 1;
+            for(auto& [dx, dy] : a) {
+                long long nx = x + dx, ny = y + dy;
+                if(nx < 0 || ny < 0 || nx >= m || ny >= n) {
+                    cnt = 0;
+                    break;
+                }
+                if(st.count(nx * n + ny)) cnt++;
+            }
+            ans[cnt]++;
+        }            
+    }
+    for(int i = 2; i <= 4; i++) ans[i] /= i;
+    ans[0] = sum - ans[1] - ans[2] - ans[3] - ans[4];
+    return ans;
+}

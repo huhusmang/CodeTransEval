@@ -1,0 +1,10 @@
+def minimumSeconds(nums: List[int]) -> int:
+    pos = defaultdict(list)
+    for i, x in enumerate(nums):
+        pos[x].append(i)
+    ans = n = len(nums)
+    for a in pos.values():
+        a.append(a[0] + n)
+        mx = max((j - i) // 2 for i, j in pairwise(a))
+        ans = min(ans, mx)
+    return ans

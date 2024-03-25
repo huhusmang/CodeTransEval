@@ -1,0 +1,16 @@
+public static  long arrayManipulation(int n, List<List<Integer>> queries) {
+    long[] arr = new long[n + 2];
+    long max = 0;
+    long sum = 0;
+    
+    for (List<Integer> query : queries) {
+        arr[query.get(0)] += query.get(2);
+        arr[query.get(1) + 1] -= query.get(2);
+    }
+    
+    for (long val : arr) {
+        sum += val;
+        if (sum > max) max = sum;
+    }
+    return max;
+}

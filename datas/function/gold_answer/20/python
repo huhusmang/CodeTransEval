@@ -1,0 +1,10 @@
+def minOperations(nums):
+    cnt = {}
+    for x in nums:
+        cnt[x] = cnt.get(x, 0) + 1
+    ans = 0
+    for c in cnt.values():
+        if c == 1:
+            return -1
+        ans += (c + 2) // 3
+    return ans

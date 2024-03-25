@@ -1,0 +1,13 @@
+def maxLevelSum(root: Optional[TreeNode]) -> int:
+    sums = []
+    dfs(root, 0, sums)
+    return sums.index(max(sums)) + 1  
+def dfs(node: TreeNode, level: int, sums) -> None:
+    if level == len(sums):
+        sums.append(node.val)
+    else:
+        sums[level] += node.val
+    if node.left:
+        dfs(node.left, level + 1, sums)
+    if node.right:
+        dfs(node.right, level + 1, sums)

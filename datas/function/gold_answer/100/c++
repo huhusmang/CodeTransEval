@@ -1,0 +1,10 @@
+int appendCharacters(string s, string t) {
+    int j = 0, m = t.size();
+    for (char c : s) {
+        if (c == t[j]) {
+            j += 1;
+            if (j == m) return 0;
+        }
+    }
+    return m - j;
+}

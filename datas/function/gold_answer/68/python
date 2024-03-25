@@ -1,0 +1,7 @@
+def dayOfProgrammer(year):
+    if 1918==year:
+        return '26.09.1918'
+    leap_year = True
+    if year % 4 or year > 1918 and not year % 100 and year % 400:
+        leap_year = False
+    return '.'.join(['12' if leap_year else '13', '09', str(year)])

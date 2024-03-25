@@ -1,0 +1,13 @@
+public static  int minimumOperations(String num) {
+    int len = num.length();
+    int zero = num.contains("0")? len - 1: len;
+    return Math.min(f("00", num),
+    Math.min( f("25", num), Math.min(f("50", num), Math.min(f("75", num), zero))));
+}
+public static  int f(String target, String num) {
+    int i = num.lastIndexOf(target.substring(1));
+    if (i < 0) return num.length();
+    i = num.substring(0, i).lastIndexOf(target.substring(0,1));
+    if (i < 0) return num.length();
+    return num.length() - i - 2;
+}

@@ -1,0 +1,5 @@
+def miniMaxSum(a):
+    s = sum(a)
+    max_ = max(a)
+    min_ = min(a)
+    return [s - max_, s - min_]

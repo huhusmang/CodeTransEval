@@ -1,0 +1,18 @@
+int minLengthAfterRemovals(vector<int> &nums) {
+    int maxCnt = 0, cnt = 1, pre = nums[0];
+    int n = nums.size();
+    for(int i = 1; i < n; ++i) {
+        if(pre == nums[i]) cnt++;
+        else {
+            maxCnt = max(maxCnt, cnt);
+            pre = nums[i];
+            cnt = 1;
+        }
+    }
+    maxCnt = max(maxCnt, cnt);
+    if(maxCnt * 2 > n) return maxCnt - (n - maxCnt);
+    else {
+        if(n % 2 == 0) return 0;
+        else return 1;
+    }
+}

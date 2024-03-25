@@ -1,0 +1,19 @@
+def acmTeam(topic):
+    teamLen = len(topic)
+    topicLen = len(topic[0])
+    maxKnown = 0
+    maxTeams = 0
+    for i in range(teamLen):
+        t1 = topic[i]
+        for j in range(i + 1, teamLen):
+            know = 0
+            t2 = topic[j]
+            for k in range(topicLen):
+                if t1[k] == '1' or t2[k] == '1':
+                    know += 1
+            if know == maxKnown:
+                maxTeams += 1
+            elif know > maxKnown:
+                maxKnown = know
+                maxTeams = 1
+    return [maxKnown, maxTeams]

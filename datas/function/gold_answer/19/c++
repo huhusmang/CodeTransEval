@@ -1,0 +1,12 @@
+int maxSubarrays(vector<int> &nums) {
+    int ans = 0;
+    int a = -1; 
+    for (int x : nums) {
+        a &= x;
+        if (a == 0) {
+            ans++; 
+            a = -1;
+        }
+    }
+    return max(ans, 1); 
+}

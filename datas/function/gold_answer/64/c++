@@ -1,0 +1,24 @@
+int solve(long long l, long long r) {
+    set<long long> seen;
+    deque<long long> q;
+    for (int i = 0; i < 10; ++i) q.push_back(i);
+    while (!q.empty()) {
+        long long u = q.back();
+        q.pop_back();
+        if (to_string(u).length() >= 20) continue;
+        if (seen.find(u) != seen.end()) continue;
+        seen.insert(u);
+        int length = to_string(u).length();
+        for (int k = length; k < length + 5; ++k) {
+            if (to_string(u * k).length() == k) {
+                q.push_back(u * k);
+            }
+        }
+    }
+    int count = 0;
+    for (const auto &s : seen) {
+        if (l <= s && s <= r) count++;
+    }
+    cout << "[" << l << ", " << r << "]: " << count << endl;
+    return count;
+}

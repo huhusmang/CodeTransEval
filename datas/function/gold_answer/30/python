@@ -1,0 +1,13 @@
+def countInterestingSubarrays(nums, modulo, k):
+    n = len(nums)
+    ans = 0
+    preSum = [0] * (n + 1)
+    for i in range(n):
+        preSum[i+1] = preSum[i] + (1 if nums[i] % modulo == k else 0)
+    count_map = {}
+    for i in range(n + 1):
+        key = (preSum[i] % modulo - k + modulo) % modulo
+        if key in count_map:
+            ans += count_map[key]
+        count_map[preSum[i] % modulo] = count_map.get(preSum[i] % modulo, 0) + 1
+    return ans

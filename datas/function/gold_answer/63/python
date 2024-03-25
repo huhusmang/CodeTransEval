@@ -1,0 +1,10 @@
+def isFibo(n):
+    start = 0
+    last = 1
+    while last <= n:
+        tmp = last + start
+        start = last
+        last = tmp
+        if last== n:
+            return "IsFibo"
+    return "IsNotFibo"

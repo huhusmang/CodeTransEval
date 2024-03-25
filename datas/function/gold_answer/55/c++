@@ -1,0 +1,27 @@
+int bsearch(const vector<int>& arr, int x) {
+    int low = 0;
+    int high = arr.size() - 1;
+    int mid = 0;
+    while (low <= high) {
+        mid = low + (high - low) / 2;
+        if (arr[mid] < x) {
+            high = mid - 1;
+        } else if (arr[mid] > x) {
+            low = mid + 1;
+        } else {
+            return mid + 1;
+        }
+    }
+    return low + 1;
+}
+vector<int> climbingLeaderboard(vector<int>& ranked, const vector<int>& player) {
+    unordered_set<int> rank_set(ranked.begin(), ranked.end());
+    vector<int> rank_nums(rank_set.begin(), rank_set.end());
+    sort(rank_nums.begin(), rank_nums.end(), greater<int>());
+    vector<int> result;
+    for (int score : player) {
+        int rank = bsearch(rank_nums, score);
+        result.push_back(rank);
+    }
+    return result;
+}

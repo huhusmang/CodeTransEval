@@ -1,0 +1,11 @@
+vector<string> cavityMap(vector<string> grid) {
+    for (size_t k = 1; k < grid.size() - 1; ++k) {
+        for (size_t j = 1; j < grid[k].size() - 1; ++j) {
+            if (grid[k][j - 1] < grid[k][j] && grid[k][j] > grid[k][j + 1] &&
+                grid[k + 1][j] < grid[k][j] && grid[k - 1][j] < grid[k][j]) {
+                grid[k][j] = 'X';
+            }
+        }
+    }
+    return grid;
+}

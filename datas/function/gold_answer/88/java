@@ -1,0 +1,29 @@
+public static boolean isPossible(int n, List<List<Integer>> edges) {
+    var g = new Set[n + 1];
+    Arrays.setAll(g, e -> new HashSet<Integer>());
+    for (var e : edges) {
+        int x = e.get(0), y = e.get(1);
+        g[x].add(y);
+        g[y].add(x);
+    }
+    var odd = new ArrayList<Integer>();
+    for (var i = 1; i <= n; ++i)
+        if (g[i].size() % 2 > 0) odd.add(i);
+    var m = odd.size();
+    if (m == 0) return true;
+    if (m == 2) {
+        int x = odd.get(0), y = odd.get(1);
+        if (!g[x].contains(y)) return true;
+        for (var i = 1; i <= n; ++i)
+            if (i != x && i != y && !g[i].contains(x) && !g[i].contains(y))
+                return true;
+        return false;
+    }
+    if (m == 4) {
+        int a = odd.get(0), b = odd.get(1), c = odd.get(2), d = odd.get(3);
+        return !g[a].contains(b) && !g[c].contains(d) ||
+                !g[a].contains(c) && !g[b].contains(d) ||
+                !g[a].contains(d) && !g[b].contains(c);
+    }
+    return false;
+}

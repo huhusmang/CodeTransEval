@@ -1,0 +1,19 @@
+def solve(a):
+    result = []
+    cum = [0] * len(a)
+    cum[0] = a[0]
+    for i in range(1, len(a)):
+        cum[i] = cum[i-1] + a[i]
+    total = cum[-1]
+    for i in range(len(cum)):
+        if total % cum[i] == 0:
+            j = i + 1
+            segment_sum = 0
+            while j < len(a) and segment_sum < cum[i]:
+                segment_sum += a[j]
+                if segment_sum == cum[i]:
+                    segment_sum = 0
+                j += 1
+            if segment_sum == 0 and (j == len(a) or cum[i] == total):
+                result.append(cum[i])
+    return result

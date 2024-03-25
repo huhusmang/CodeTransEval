@@ -1,0 +1,23 @@
+public static  int solve(long l, long r) {
+	Set<Long> seen = new HashSet<>();
+	Deque<Long> q = new ArrayDeque<>();
+	for (int i = 0; i < 10; i++) q.addLast((long)i);
+	while (!q.isEmpty()) {
+		long u = q.removeLast();
+		if (String.valueOf(u).length() >= 20) continue;
+		if (seen.contains(u)) continue;
+		seen.add(u);
+		int length = String.valueOf(u).length();
+		for (int k = length; k < length + 5; k++) {
+			if (String.valueOf(u * k).length() == k) {
+				q.addLast(u * k);
+			}
+		}
+	}
+	int count = 0;
+	for (long s : seen) {
+		if (l <= s && s <= r) count++;
+	}
+	System.out.println("[" + l + ", " + r + "]: " + count);
+	return count;
+}

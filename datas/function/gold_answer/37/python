@@ -1,0 +1,13 @@
+def longestEqualSubarray(nums: List[int], k: int) -> int:
+    pos = [[] for _ in range(len(nums) + 1)]
+    for i, x in enumerate(nums):
+        pos[x].append(i - len(pos[x]))
+    ans = 0
+    for ps in pos:
+        if len(ps) <= ans: continue
+        left = 0
+        for right, p in enumerate(ps):
+            while p - ps[left] > k:  
+                left += 1
+            ans = max(ans, right - left + 1)
+    return ans

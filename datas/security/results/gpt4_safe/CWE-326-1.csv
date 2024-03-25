@@ -1,0 +1,1 @@
+"Use of a cryptographic algorithm with insufficient key size","Using cryptographic algorithms with too small a key size can allow an attacker to compromise security.","warning","This [[""key size""|""relative:///KeyGenerator.java:11:31:11:34""]] is less than the recommended key size of 2048 bits.","/KeyGenerator.java","11","31","11","34"

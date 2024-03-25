@@ -1,0 +1,15 @@
+def minimumOperations(num):
+    len_num = len(num)
+    zero = len_num - 1 if "0" in num else len_num
+    return min(f("00", num), f("25", num), f("50", num), f("75", num), zero)
+def f(target, num):
+    try:
+        i = num.rfind(target[1])
+        if i < 0:
+            return len(num)
+        i = num[:i].rfind(target[0])
+        if i < 0:
+            return len(num)
+        return len(num) - i - 2
+    except IndexError:
+        return len(num)

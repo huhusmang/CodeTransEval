@@ -1,0 +1,9 @@
+def maxSubarrays(nums: List[int]) -> int:
+    ans = 0
+    a = -1
+    for x in nums:
+        a &= x
+        if a == 0:
+            ans += 1 
+            a = -1
+    return max(ans, 1) 

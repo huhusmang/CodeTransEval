@@ -1,0 +1,24 @@
+vector<int> acmTeam(const vector<string>& topic) {
+    int teamLen = topic.size();
+    int topicLen = topic[0].size();
+    int maxKnown = 0;
+    int maxTeams = 0;
+    for (int i = 0; i < teamLen; ++i) {
+        const string& t1 = topic[i];
+        for (int j = i + 1; j < teamLen; ++j) {
+            int know = 0;
+            const string& t2 = topic[j];
+            for (int k = 0; k < topicLen; ++k) {
+                if (t1[k] == '1' || t2[k] == '1')
+                    ++know;
+            }
+            if (know == maxKnown)
+                ++maxTeams;
+            else if (know > maxKnown) {
+                maxKnown = know;
+                maxTeams = 1;
+            }
+        }
+    }
+    return {maxKnown, maxTeams};
+}

@@ -1,0 +1,1 @@
+"Cross-site scripting","Writing user input directly to a web page allows for a cross-site scripting vulnerability.","error","Cross-site scripting vulnerability due to a [[""user-provided value""|""relative:///Application.java:16:24:16:87""]].","/Application.java","17","16","17","42"

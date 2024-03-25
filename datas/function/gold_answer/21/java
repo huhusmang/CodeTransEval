@@ -1,0 +1,11 @@
+public static int minOperations(List<Integer> nums, int k) {
+    int n = nums.size();
+    long u = (2L << k) - 2; 
+    long s = 0;
+    for (int i = n - 1; ; --i) {
+        s |= 1L << nums.get(i);
+        if ((s & u) == u) {
+            return n - i;
+        }
+    }
+}

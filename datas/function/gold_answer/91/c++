@@ -1,0 +1,27 @@
+int countCompleteComponents(int n, vector<vector<int>> &edges) {
+    vector<vector<int>> g(n);
+    for (auto &e : edges) {
+        int x = e[0], y = e[1];
+        g[x].push_back(y);
+        g[y].push_back(x);
+    }
+    vector<int> vis(n, 0);
+    int ans = 0, v, e;
+    for (int i = 0; i < n; i++) {
+        if (!vis[i]) {
+            v = 0;
+            e = 0;
+            dfs(i, vis, g, v, e);
+            ans += e == v * (v - 1);
+        }
+    }
+    return ans;
+}
+void dfs(int x, vector<int> &vis, vector<vector<int>> &g, int &v, int &e) {
+    vis[x] = 1;
+    v++;
+    e += g[x].size();
+    for (int y : g[x])
+        if (!vis[y])
+            dfs(y, vis, g, v, e);
+}

@@ -1,0 +1,21 @@
+def dfs(x: int, g: List[List[int]], vis: List[bool], counts: List[int]) -> None:
+    vis[x] = True
+    counts[0] += 1
+    counts[1] += len(g[x])
+    for y in g[x]:
+        if not vis[y]:
+            dfs(y, g, vis, counts)
+def countCompleteComponents(n: int, edges: List[List[int]]) -> int:
+    g = [[] for _ in range(n)]
+    for x, y in edges:
+        g[x].append(y)
+        g[y].append(x)
+    vis = [False] * n
+    ans = 0
+    for i in range(n):
+        if not vis[i]:
+            counts = [0, 0]
+            dfs(i, g, vis, counts)
+            v, e = counts
+            ans += e == v * (v - 1)
+    return ans

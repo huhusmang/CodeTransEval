@@ -1,0 +1,14 @@
+int furthestDistanceFromOrigin(string moves) {
+    int cn = 0;
+    int ans = 0;
+    for (int i = 0; i < moves.length(); i++) {
+        if (moves[i] == 'L') {
+            ans--;
+        } else if (moves[i] == 'R') {
+            ans++;
+        } else {
+            cn++;
+        }
+    }
+    return abs(ans) + cn;
+}

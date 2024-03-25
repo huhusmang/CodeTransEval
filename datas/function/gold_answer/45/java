@@ -1,0 +1,13 @@
+public static String finalString(String s) {
+    var q = new ArrayDeque<Character>();
+    var tail = true;
+    for (var c : s.toCharArray()) {
+        if (c == 'i') tail = !tail;
+        else if (tail) q.addLast(c);
+        else q.addFirst(c);
+    }
+    var ans = new StringBuilder();
+    for (var c : q) ans.append(c);
+    if (!tail) ans.reverse();
+    return ans.toString();
+}

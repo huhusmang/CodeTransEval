@@ -1,0 +1,19 @@
+def maximumPoints(edges: List[List[int]], coins: List[int], k: int) -> int:
+    g = [[] for _ in coins]
+    for x, y in edges:
+        g[x].append(y)
+        g[y].append(x)
+    return dfs(0, -1, g, coins, k)[0]
+def dfs(x: int, fa: int, g, coins, k) -> List[int]:
+    res1 = [0] * 14
+    res2 = [0] * 14
+    for y in g[x]:
+        if y == fa: continue
+        r = dfs(y, x, g, coins, k)
+        for j, v in enumerate(r):
+            res1[j] += v
+            if j < 13:
+                res2[j] += r[j + 1]
+    for j, (r1, r2) in enumerate(zip(res1, res2)):
+        res1[j] = max(r1 + (coins[x] >> j) - k, r2 + (coins[x] >> (j + 1)))
+    return res1

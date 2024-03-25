@@ -1,0 +1,12 @@
+def lastVisitedIntegers(words: List[str]) -> List[int]:
+    ans = []
+    nums = []
+    k = 0
+    for s in words:
+        if s[0] != 'p':  
+            nums.append(int(s))
+            k = 0
+        else:
+            k += 1
+            ans.append(-1 if k > len(nums) else nums[-k])  
+    return ans

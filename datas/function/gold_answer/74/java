@@ -1,0 +1,20 @@
+public static  List<Integer> solve(List<Integer> a) {
+    List<Integer> result = new ArrayList<>();
+    int[] cum = new int[a.size()];
+    cum[0] = a.get(0);
+    for (int i = 1; i < a.size(); i++) {
+        cum[i] = cum[i-1] + a.get(i);
+    }
+    for (int i = 0; i < cum.length+1/2; i++) {
+        if(cum[cum.length-1]%cum[i] == 0) {
+            int temp = 0;
+            for (int j = i+1; j < cum.length; j++) {
+                temp += a.get(j);
+                if (temp > cum[i]) break;
+                if (temp%cum[i] == 0) temp = 0; 
+            }
+            if (temp == 0) result.add(cum[i]);
+        }
+    }
+    return result;
+}

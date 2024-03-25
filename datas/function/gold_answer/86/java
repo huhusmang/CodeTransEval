@@ -1,0 +1,20 @@
+public static int countBeautifulPairs(int[] nums) {
+    int ans = 0;
+    var cnt = new int[10];
+    for (int x : nums) {
+        for (int y = 1; y < 10; y++)
+            if (cnt[y] > 0 && gcd(x % 10, y) == 1)
+                ans += cnt[y];
+        while (x >= 10) x /= 10;
+        cnt[x]++;
+    }
+    return ans;
+}
+private static int gcd(int a, int b) {
+    while (a != 0) {
+        int tmp = a;
+        a = b % a;
+        b = tmp;
+    }
+    return b;
+}

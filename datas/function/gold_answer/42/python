@@ -1,0 +1,9 @@
+def minAbsoluteDifference(nums: List[int], x: int) -> int:
+    ans = float('inf') 
+    pre = [float('inf')] 
+    for i in range(len(nums)-x):
+        insort_left(pre, nums[i]) 
+        index = bisect_left(pre, nums[i+x])
+        tmp = min(abs(pre[index]-nums[i+x]) for index in (index, index-1))
+        ans = min(ans, tmp)
+    return ans 

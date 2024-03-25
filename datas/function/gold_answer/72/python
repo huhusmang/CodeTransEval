@@ -1,0 +1,18 @@
+def matrixRotation(matrix, r):
+    l, br, bc = 0, len(matrix), len(matrix[0])
+    while l < min(br, bc) / 2:
+        rr = r % (2 * (br + bc - l * 4 - 2))
+        while (rr) != 0:
+            rr -= 1
+            buf = matrix[l][l]
+            for j in range(l, bc - l - 1):
+                matrix[l][j] = matrix[l][j + 1]
+            for i in range(l, br - l - 1):
+                matrix[i][bc - l - 1] = matrix[i + 1][bc - l - 1]
+            for j in range(bc - l - 1, l, -1):
+                matrix[br - l - 1][j] = matrix[br - l - 1][j - 1]
+            for i in range(br - l - 1, l + 1, -1):
+                matrix[i][l] = matrix[i - 1][l]
+            matrix[l + 1][l] = buf
+        l += 1
+    return matrix

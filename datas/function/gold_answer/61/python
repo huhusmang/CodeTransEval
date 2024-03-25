@@ -1,0 +1,13 @@
+def maximumSum(a, m):
+    max_sum = 0
+    current_sum = 0
+    sorted_sums = [0] 
+    for value in a:
+        current_sum = (current_sum + value) % m
+        max_sum = max(max_sum, current_sum)
+        idx = bisect_right(sorted_sums, current_sum)
+        if idx < len(sorted_sums):
+            possible_max = (current_sum - sorted_sums[idx] + m) % m
+            max_sum = max(max_sum, possible_max)
+        insort(sorted_sums, current_sum)
+    return max_sum

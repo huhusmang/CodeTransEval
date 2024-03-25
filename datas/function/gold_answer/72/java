@@ -1,0 +1,26 @@
+public static List<List<Integer>> matrixRotation(List<List<Integer>> matrix, int r) {
+	int l = 0;
+	int br = matrix.size();
+	int bc = matrix.get(0).size();
+	while (l < Math.min(br, bc) / 2) {
+		int rr = r % (2 * (br + bc - 4 * l - 2));
+		while (rr-- > 0) {
+			int buf = matrix.get(l).get(l);
+			for (int j = l; j < bc - l - 1; ++j) {
+				matrix.get(l).set(j, matrix.get(l).get(j + 1));
+			}
+			for (int i = l; i < br - l - 1; ++i) {
+				matrix.get(i).set(bc - l - 1, matrix.get(i + 1).get(bc - l - 1));
+			}
+			for (int j = bc - l - 1; j > l; --j) {
+				matrix.get(br - l - 1).set(j, matrix.get(br - l - 1).get(j - 1));
+			}
+			for (int i = br - l - 1; i > l + 1; --i) {
+				matrix.get(i).set(l, matrix.get(i - 1).get(l));
+			}
+			matrix.get(l + 1).set(l, buf);
+		}
+		++l;
+	}
+	return matrix;
+}

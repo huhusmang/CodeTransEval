@@ -1,0 +1,12 @@
+public static int countWays(List<Integer> nums) {
+    int[] a = nums.stream().mapToInt(i -> i).toArray();
+    Arrays.sort(a);
+    int n = a.length;
+    int ans = a[0] > 0 ? 1 : 0; 
+    for (int i = 0; i < n - 1; i++) {
+        if (a[i] < i + 1 && i + 1 < a[i + 1]) {
+            ans++;
+        }
+    }
+    return ans + 1;
+}

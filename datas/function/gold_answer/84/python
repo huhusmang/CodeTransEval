@@ -1,0 +1,11 @@
+def findFirstPairExceedingSum(pairs: List[List[int]]) -> int:
+    max_sum = 0
+    day_index = 0
+    for i, pair in enumerate(pairs, start=1):
+        a = pair[0]
+        b = pair[1]
+        sum = a + b
+        if sum > 8 and sum > max_sum:
+            max_sum = sum
+            day_index = i
+    return day_index

@@ -1,0 +1,2 @@
+"Request without certificate validation","Making a request without certificate validation can allow man-in-the-middle attacks.","error","This request may run without certificate validation because [[""it is disabled""|""relative:///2/vul.py:4:43:4:43""]].","/2/vul.py","4","1","4","44"
+"Request without certificate validation","Making a request without certificate validation can allow man-in-the-middle attacks.","error","This request may run without certificate validation because [[""it is disabled""|""relative:///1/vul.py:4:43:4:47""]].","/1/vul.py","4","1","4","48"

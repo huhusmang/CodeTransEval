@@ -1,0 +1,15 @@
+def minimumBeautifulSubstrings(s):
+    if s[0] == '0':
+        return -1
+    beautiful_strings = {"1", "101", "11001", "1111101", "1001110001", "110000110101", "11110100001001"}
+    n = len(s)
+    f = [float('inf')] * (n + 10)
+    f[0] = 0
+    for i in range(n):
+        for j in range(i, n):
+            current_substring = s[i:j+1]
+            if current_substring in beautiful_strings:
+                f[j+1] = min(f[j+1], f[i] + 1)
+    if f[n] == float('inf'):
+        return -1
+    return f[n]

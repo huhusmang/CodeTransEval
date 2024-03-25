@@ -1,0 +1,1 @@
+"XPath injection","Building an XPath expression from user-controlled sources is vulnerable to insertion of malicious code by the user.","error","XPath expression depends on a [[""user-provided value""|""relative:///Application.java:25:21:25:46""]].","/Application.java","40","53","40","94"

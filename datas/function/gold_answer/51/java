@@ -1,0 +1,6 @@
+public static List<Long> miniMaxSum(List<Integer> a) {
+    long sum = a.stream().mapToLong(Integer::longValue).sum(); 
+    int max = Collections.max(a);
+    int min = Collections.min(a);
+    return Arrays.asList(sum - max, sum - min);
+}

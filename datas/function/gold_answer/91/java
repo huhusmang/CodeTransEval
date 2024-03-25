@@ -1,0 +1,33 @@
+public static int countCompleteComponents(int n, int[][] edges) {
+    List<Integer>[] list = new ArrayList[n];
+    for (int i = 0; i < list.length; i++) {
+        list[i] = new ArrayList<>();
+    }
+    for (int i = 0; i < edges.length; i++) {
+        list[edges[i][0]].add(edges[i][1]);
+        list[edges[i][1]].add(edges[i][0]);
+    }
+    int ans = 0;
+    boolean[] visited = new boolean[n];
+    for (int i = 0; i < n; i++) {
+        if (!visited[i]) {
+            int[] v = new int[1];
+            int[] e = new int[1];
+            dfs(list, visited, v, e, i);
+            if (v[0] * (v[0] - 1) == e[0]) {
+                ans++;
+            }
+        }
+    }
+    return ans;
+}
+public static void dfs(List<Integer>[] list, boolean[] visited, int[] v, int[] e, int current) {
+    if (!visited[current]) {
+        visited[current] = true;
+        v[0]++;
+        e[0] += list[current].size();
+        for (int n: list[current]) {
+            dfs(list, visited, v, e, n);
+        }
+    }
+}

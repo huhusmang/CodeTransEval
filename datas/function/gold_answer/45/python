@@ -1,0 +1,11 @@
+def finalString(s: str) -> str:
+    q = deque()
+    tail = True
+    for c in s:
+        if c == 'i':
+            tail = not tail  
+        elif tail:  
+            q.append(c)
+        else:  
+            q.appendleft(c)
+    return ''.join(q if tail else reversed(q))

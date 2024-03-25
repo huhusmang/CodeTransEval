@@ -1,0 +1,14 @@
+public static long countInterestingSubarrays(List<Integer> nums, int modulo, int k) {
+    int n = nums.size();
+    long ans = 0;
+    int[] preSum = new int[n+1];
+    for(int i=0;i<n;i++)
+        preSum[i+1] = preSum[i] + (nums.get(i) % modulo == k?1:0);
+    Map<Integer,Integer> map = new HashMap<>();
+    for(int i=0;i<=n;i++){
+        if(map.containsKey((preSum[i]%modulo - k + modulo)%modulo))
+            ans += map.get((preSum[i]%modulo - k + modulo)%modulo);
+        map.put(preSum[i]%modulo,map.getOrDefault(preSum[i]%modulo,0)+1);
+    }
+    return ans;
+}

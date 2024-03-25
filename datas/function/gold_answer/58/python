@@ -1,0 +1,6 @@
+def evaluateTree(root: Optional[TreeNode]) -> bool:
+    if root.left is None:
+        return bool(root.val)
+    l = evaluateTree(root.left)
+    r = evaluateTree(root.right)
+    return l or r if root.val == 2 else l and r

@@ -1,0 +1,18 @@
+def solve(l, r):
+    from collections import deque
+    seen = set()
+    q = deque()
+    q.extend(range(10))
+    while q:
+        u = q.pop()
+        if len(str(u)) >= 20:
+            continue
+        if u in seen:
+            continue
+        seen.add(u)
+        length = len(str(u))
+        for k in range(length, length + 5):
+            if len(str(u * k)) == k:
+                q.append(u * k)
+    print(f'[{l}, {r}]: {sum(l <= s <= r for s in seen)}')
+    return sum(l <= s <= r for s in seen)

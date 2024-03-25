@@ -1,0 +1,5 @@
+def solve(a, b):
+    m = a
+    n = b
+    ans = min(((m-1)*n+(n-1)), ((n-1)*m+(m-1)))
+    return m*n - 1

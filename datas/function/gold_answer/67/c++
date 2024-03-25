@@ -1,0 +1,13 @@
+int minimumLoss(vector<long> price) {
+    unordered_map<long, int> map;
+    for (int i = 0; i < price.size(); ++i) {
+        map[price[i]] = i;
+    }
+    sort(price.begin(), price.end());
+    long min = numeric_limits<int>::max();
+    for (int i = 0; i < price.size() - 1; ++i) {
+        long currentMin = price[i + 1] - price[i];
+        if (currentMin < min && map[price[i]] > map[price[i + 1]]) min = currentMin;
+    }
+    return static_cast<int>(min);
+}

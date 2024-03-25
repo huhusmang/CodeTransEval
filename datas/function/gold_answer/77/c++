@@ -1,0 +1,14 @@
+bool checkArray(vector<int> &nums, int k) {
+    int n = nums.size(), sum_d = 0;
+    vector<int> d(n + 1);
+    for (int i = 0; i < n; i++) {
+        sum_d += d[i];
+        int x = nums[i];
+        x += sum_d;
+        if (x == 0) continue;
+        if (x < 0 || i + k > n) return false;
+        sum_d -= x;
+        d[i + k] += x;
+    }
+    return true;
+}

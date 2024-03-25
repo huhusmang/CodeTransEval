@@ -1,0 +1,14 @@
+int longestSquareStreak(vector<int>& nums) {
+    int ans = 0;
+    unordered_set<int> s(nums.begin(), nums.end());
+    for (int x : s) {
+        int cnt = 0;
+        while (s.find(x) != s.end()) {
+            cnt += 1;
+            if (x > std::sqrt(INT_MAX)) break;
+            x *= x;
+        }
+        ans = max(ans, cnt);
+    }
+    return ans > 1 ? ans : -1;
+}

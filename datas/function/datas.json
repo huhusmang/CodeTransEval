@@ -1,0 +1,3121 @@
+[
+    {
+        "id": 1,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4\uff0c\u4f4d\u8fd0\u7b97",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/find-the-k-or-of-an-array",
+        "entry_point": "findKOr",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 2,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u8d2a\u5fc3",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros",
+        "entry_point": "minSum",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]",
+                    "int[]"
+                ],
+                "returnType": "long"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "vector<int>"
+                ],
+                "returnType": "long long"
+            }
+        }
+    },
+    {
+        "id": 3,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u52a8\u6001\u89c4\u5212",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/length-of-the-longest-subsequence-that-sums-to-target",
+        "entry_point": "lengthOfLongestSubsequence",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 4,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u8d2a\u5fc3\uff0c\u5b57\u7b26\u4e32",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/minimum-number-of-changes-to-make-binary-string-beautiful",
+        "entry_point": "minChanges",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "str"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "String"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "string"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 5,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u8d2a\u5fc3\uff0c\u54c8\u5e0c\u8868",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/minimum-number-of-groups-to-create-a-valid-assignment",
+        "entry_point": "minGroupsForValidAssignment",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 6,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/minimum-sum-of-mountain-triplets-ii",
+        "entry_point": "minimumSum",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 7,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u524d\u7f00\u548c",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/construct-product-matrix",
+        "entry_point": "constructProductMatrix",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[List[int]]"
+                ],
+                "returnType": "List[List[int]]"
+            },
+            "java": {
+                "paramsType": [
+                    "int[][]"
+                ],
+                "returnType": "int[][]"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<vector<int>>"
+                ],
+                "returnType": "vector<vector<int>>"
+            }
+        }
+    },
+    {
+        "id": 8,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u8d2a\u5fc3\uff0c\u5b57\u7b26\u4e32",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/maximum-odd-binary-number/description/",
+        "entry_point": "maximumOddBinaryNumber",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "str"
+                ],
+                "returnType": "str"
+            },
+            "java": {
+                "paramsType": [
+                    "String"
+                ],
+                "returnType": "String"
+            },
+            "c++": {
+                "paramsType": [
+                    "string"
+                ],
+                "returnType": "string"
+            }
+        }
+    },
+    {
+        "id": 9,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6ed1\u52a8\u7a97\u53e3",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/shortest-and-lexicographically-smallest-beautiful-string",
+        "entry_point": "shortestBeautifulSubstring",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "str",
+                    "int"
+                ],
+                "returnType": "str"
+            },
+            "java": {
+                "paramsType": [
+                    "String",
+                    "int"
+                ],
+                "returnType": "String"
+            },
+            "c++": {
+                "paramsType": [
+                    "string",
+                    "int"
+                ],
+                "returnType": "string"
+            }
+        }
+    },
+    {
+        "id": 10,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6808\uff0c\u8d2a\u5fc3\uff0c\u52a8\u6001\u89c4\u5212",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/minimum-additions-to-make-valid-string/description/",
+        "entry_point": "addMinimum",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "str"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "String"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "string"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 11,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u8d2a\u5fc3\uff0c\u6570\u5b66\uff0c\u4e8c\u5206\u67e5\u627e\uff0c\u6392\u5e8f",
+        "difficulty": "hard",
+        "url": "https://leetcode.cn/problems/maximum-number-of-groups-with-increasing-length/description/",
+        "entry_point": "maxIncreasingGroups",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 12,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4\uff0c\u5b57\u7b26\u4e32",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/last-visited-integers/description/",
+        "entry_point": "lastVisitedIntegers",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[str]"
+                ],
+                "returnType": "List[int]"
+            },
+            "java": {
+                "paramsType": [
+                    "List<String>"
+                ],
+                "returnType": "List<Integer>"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<string>"
+                ],
+                "returnType": "vector<int>"
+            }
+        }
+    },
+    {
+        "id": 13,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u5b57\u7b26\u4e32\uff0c\u52a8\u6001\u89c4\u5212",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/apply-operations-to-make-two-strings-equal/description/",
+        "entry_point": "minOperations",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "str",
+                    "str",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "String",
+                    "String",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "string",
+                    "string",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 14,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u8d2a\u5fc3\uff0c\u6392\u5e8f",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/minimum-processing-time/description/",
+        "entry_point": "minProcessingTime",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>",
+                    "List<Integer>"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 15,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u5b66",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/divisible-and-non-divisible-sums-difference/description/",
+        "entry_point": "differenceOfSums",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 16,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u54c8\u5e0c\u8868\uff0c\u524d\u7f00\u548c\uff0c\u6ed1\u52a8\u7a97\u53e3",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/minimum-size-subarray-in-infinite-array/description/",
+        "entry_point": "minSizeSubarray",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 17,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/maximum-value-of-an-ordered-triplet-ii/description/",
+        "entry_point": "maximumTripletValue",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]"
+                ],
+                "returnType": "long"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "long long"
+            }
+        }
+    },
+    {
+        "id": 18,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/maximum-value-of-an-ordered-triplet-i/description/",
+        "entry_point": "maximumTripletValue",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]"
+                ],
+                "returnType": "long"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "long long"
+            }
+        }
+    },
+    {
+        "id": 19,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u8d2a\u5fc3\uff0c\u4f4d\u8fd0\u7b97",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/split-array-into-maximum-number-of-subarrays/description/",
+        "entry_point": "maxSubarrays",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 20,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u8d2a\u5fc3\uff0c\u54c8\u5e0c\u8868",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/minimum-number-of-operations-to-make-array-empty/description/",
+        "entry_point": "minOperations",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 21,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u54c8\u5e0c\u8868",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/minimum-operations-to-collect-elements/description/",
+        "entry_point": "minOperations",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 22,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u4e8c\u5206\u67e5\u627e",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/maximum-number-of-alloys/description/",
+        "entry_point": "maxNumberOfAlloys",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "int",
+                    "int",
+                    "List[List[int]]",
+                    "List[int]",
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "int",
+                    "int",
+                    "List<List<Integer>>",
+                    "List<Integer>",
+                    "List<Integer>"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "int",
+                    "int",
+                    "vector<vector<int>>",
+                    "vector<int>",
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 23,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u679a\u4e3e\uff0c\u6392\u5e8f",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/happy-students/description/",
+        "entry_point": "countWays",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 24,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4\uff0c\u4f4d\u8fd0\u7b97",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/sum-of-values-at-indices-with-k-set-bits/description/",
+        "entry_point": "sumIndicesWithKSetBits",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 25,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u4f4d\u8fd0\u7b97\uff0c\u54c8\u5e0c\u8868",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/count-pairs-of-points-with-distance-k/description/",
+        "entry_point": "countPairs",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[List[int]]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<List<Integer>>",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<vector<int>>",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 26,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/minimum-right-shifts-to-sort-the-array/description/",
+        "entry_point": "minimumRightShifts",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 27,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u54c8\u5e0c\u8868\uff0c\u53cc\u6307\u9488\uff0c\u4e8c\u5206\u67e5\u627e",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/minimum-array-length-after-pair-removals/description/",
+        "entry_point": "minLengthAfterRemovals",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 28,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u54c8\u5e0c\u8868\uff0c\u524d\u7f00\u548c",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/points-that-intersect-with-cars/description/",
+        "entry_point": "numberOfPoints",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[List[int]]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<List<Integer>>"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<vector<int>>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 29,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u5b66",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/determine-if-a-cell-is-reachable-at-a-given-time/description/",
+        "entry_point": "isReachableAtTime",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "int",
+                    "int",
+                    "int",
+                    "int"
+                ],
+                "returnType": "bool"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "int",
+                    "int",
+                    "int",
+                    "int"
+                ],
+                "returnType": "boolean"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "int",
+                    "int",
+                    "int",
+                    "int"
+                ],
+                "returnType": "bool"
+            }
+        }
+    },
+    {
+        "id": 30,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u54c8\u5e0c\u8868\uff0c\u524d\u7f00\u548c",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/count-of-interesting-subarrays/description/",
+        "entry_point": "countInterestingSubarrays",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>",
+                    "int",
+                    "int"
+                ],
+                "returnType": "long"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int",
+                    "int"
+                ],
+                "returnType": "long long"
+            }
+        }
+    },
+    {
+        "id": 31,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u8d2a\u5fc3\uff0c\u679a\u4e3e",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/minimum-operations-to-make-a-special-number/description/",
+        "entry_point": "minimumOperations",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "str"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "String"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "string"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 32,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u679a\u4e3e",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/count-symmetric-integers/description/",
+        "entry_point": "countSymmetricIntegers",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 33,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u54c8\u5e0c\u8868\uff0c\u6ed1\u52a8\u7a97\u53e3",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/maximum-sum-of-almost-unique-subarray/description/",
+        "entry_point": "maxSum",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>",
+                    "int",
+                    "int"
+                ],
+                "returnType": "long"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int",
+                    "int"
+                ],
+                "returnType": "long long"
+            }
+        }
+    },
+    {
+        "id": 34,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u54c8\u5e0c\u8868\uff0c\u5b57\u7b26\u4e32\uff0c\u6392\u5e8f",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/check-if-strings-can-be-made-equal-with-operations-ii/description/",
+        "entry_point": "checkStrings",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "str",
+                    "str"
+                ],
+                "returnType": "bool"
+            },
+            "java": {
+                "paramsType": [
+                    "String",
+                    "String"
+                ],
+                "returnType": "boolean"
+            },
+            "c++": {
+                "paramsType": [
+                    "string",
+                    "string"
+                ],
+                "returnType": "bool"
+            }
+        }
+    },
+    {
+        "id": 35,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u5b57\u7b26\u4e32",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/check-if-strings-can-be-made-equal-with-operations-i/description/",
+        "entry_point": "canBeEqual",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "str",
+                    "str"
+                ],
+                "returnType": "bool"
+            },
+            "java": {
+                "paramsType": [
+                    "String",
+                    "String"
+                ],
+                "returnType": "boolean"
+            },
+            "c++": {
+                "paramsType": [
+                    "string",
+                    "string"
+                ],
+                "returnType": "bool"
+            }
+        }
+    },
+    {
+        "id": 36,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4\uff0c\u8ba1\u6570",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/furthest-point-from-origin/description/",
+        "entry_point": "furthestDistanceFromOrigin",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "str"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "String"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "string"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 37,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u54c8\u5e0c\u8868\uff0c\u4e8c\u5206\u67e5\u627e\uff0c\u6ed1\u52a8\u7a97\u53e3",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/find-the-longest-equal-subarray/description/",
+        "entry_point": "longestEqualSubarray",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 38,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4\uff0c\u5b57\u7b26\u4e32",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/check-if-a-string-is-an-acronym-of-words/description/",
+        "entry_point": "isAcronym",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[str]",
+                    "str"
+                ],
+                "returnType": "bool"
+            },
+            "java": {
+                "paramsType": [
+                    "List<String>",
+                    "String"
+                ],
+                "returnType": "boolean"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<string>",
+                    "string"
+                ],
+                "returnType": "bool"
+            }
+        }
+    },
+    {
+        "id": 39,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u8d2a\u5fc3",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/determine-the-minimum-sum-of-a-k-avoiding-array/description/",
+        "entry_point": "minimumSum",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 40,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4\uff0c\u52a8\u6001\u89c4\u5212",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/sorting-three-groups/description/",
+        "entry_point": "minimumOperations",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 41,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u53cc\u6307\u9488\uff0c\u6392\u5e8f",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/count-pairs-whose-sum-is-less-than-target/description/",
+        "entry_point": "countPairs",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 42,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u4e8c\u5206\u67e5\u627e\uff0c\u6709\u5e8f\u96c6\u5408",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/minimum-absolute-difference-between-elements-with-constraint/description/",
+        "entry_point": "minAbsoluteDifference",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 43,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6808\uff0c\u94fe\u8868",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/double-a-number-represented-as-a-linked-list/description/",
+        "entry_point": "doubleIt",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "ListNode"
+                ],
+                "returnType": "ListNode"
+            },
+            "java": {
+                "paramsType": [
+                    "ListNode"
+                ],
+                "returnType": "ListNode"
+            },
+            "c++": {
+                "paramsType": [
+                    "ListNode*"
+                ],
+                "returnType": "ListNode*"
+            }
+        }
+    },
+    {
+        "id": 44,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4\uff0c\u54c8\u5e0c\u8868",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/max-pair-sum-in-an-array/description/",
+        "entry_point": "maxSum",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 45,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u5b57\u7b26\u4e32\uff0c\u6a21\u62df",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/faulty-keyboard/description/",
+        "entry_point": "finalString",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "str"
+                ],
+                "returnType": "str"
+            },
+            "java": {
+                "paramsType": [
+                    "String"
+                ],
+                "returnType": "String"
+            },
+            "c++": {
+                "paramsType": [
+                    "string"
+                ],
+                "returnType": "string"
+            }
+        }
+    },
+    {
+        "id": 46,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u8d2a\u5fc3\uff0c\u52a8\u6001\u89c4\u5212",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/check-if-it-is-possible-to-split-array/description/",
+        "entry_point": "canSplitArray",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "bool"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>",
+                    "int"
+                ],
+                "returnType": "boolean"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "bool"
+            }
+        }
+    },
+    {
+        "id": 47,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6ed1\u52a8\u7a97\u53e3",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/longest-even-odd-subarray-with-threshold/description/",
+        "entry_point": "longestAlternatingSubarray",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 48,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u8d2a\u5fc3\uff0c\u54c8\u5e0c\u8868",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/minimum-seconds-to-equalize-a-circular-array/description/",
+        "entry_point": "minimumSeconds",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 49,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u679a\u4e3e",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/number-of-employees-who-met-the-target/description/",
+        "entry_point": "numberOfEmployeesWhoMetTarget",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 50,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u5b57\u7b26\u4e32",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/split-strings-by-separator/description/",
+        "entry_point": "splitWordsBySeparator",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[str]",
+                    "str"
+                ],
+                "returnType": "List[str]"
+            },
+            "java": {
+                "paramsType": [
+                    "List<String>",
+                    "char"
+                ],
+                "returnType": "List<String>"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<string>",
+                    "char"
+                ],
+                "returnType": "vector<string>"
+            }
+        }
+    },
+    {
+        "id": 51,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u57fa\u672c\u8fd0\u7b97\uff0c\u8fb9\u754c",
+        "difficulty": "easy",
+        "url": "https://www.hackerrank.com/challenges/mini-max-sum/problem",
+        "entry_point": "miniMaxSum",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "List[int]"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>"
+                ],
+                "returnType": "List<Long>"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "vector<long>"
+            }
+        }
+    },
+    {
+        "id": 52,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u5206\u6790\uff0c\u6392\u5e8f",
+        "difficulty": "easy",
+        "url": "https://www.hackerrank.com/challenges/picking-numbers/problem",
+        "entry_point": "pickingNumbers",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 53,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u5b66\uff0c\u8fb9\u754c",
+        "difficulty": "medium",
+        "url": "https://www.hackerrank.com/challenges/summing-the-n-series/problem",
+        "entry_point": "summingSeries",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "long"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "long long"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 54,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u5b57\u7b26\u4e32",
+        "difficulty": "medium",
+        "url": "https://www.hackerrank.com/challenges/sparse-arrays/problem",
+        "entry_point": "matchingStrings",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[str]",
+                    "List[str]"
+                ],
+                "returnType": "List[int]"
+            },
+            "java": {
+                "paramsType": [
+                    "List<String>",
+                    "List<String>"
+                ],
+                "returnType": "List<Integer>"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<string>",
+                    "vector<string>"
+                ],
+                "returnType": "vector<int>"
+            }
+        }
+    },
+    {
+        "id": 55,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6392\u5e8f",
+        "difficulty": "medium",
+        "url": "https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem",
+        "entry_point": "climbingLeaderboard",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "List[int]"
+                ],
+                "returnType": "List[int]"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>",
+                    "List<Integer>"
+                ],
+                "returnType": "List<Integer>"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "vector<int>"
+                ],
+                "returnType": "vector<int>"
+            }
+        }
+    },
+    {
+        "id": 56,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4",
+        "difficulty": "hard",
+        "url": "https://www.hackerrank.com/challenges/crush/problem",
+        "entry_point": "arrayManipulation",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "List[List[int]]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "List<List<Integer>>"
+                ],
+                "returnType": "long"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "vector<vector<int>>"
+                ],
+                "returnType": "long long"
+            }
+        }
+    },
+    {
+        "id": 57,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u94fe\u8868",
+        "difficulty": "easy",
+        "url": "https://www.hackerrank.com/challenges/delete-a-node-from-a-linked-list/problem",
+        "entry_point": "deleteNode",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "ListNode",
+                    "int"
+                ],
+                "returnType": "ListNode"
+            },
+            "java": {
+                "paramsType": [
+                    "ListNode",
+                    "int"
+                ],
+                "returnType": "ListNode"
+            },
+            "c++": {
+                "paramsType": [
+                    "ListNode*",
+                    "int"
+                ],
+                "returnType": "ListNode*"
+            }
+        }
+    },
+    {
+        "id": 58,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6811\uff0c\u6df1\u5ea6\u4f18\u5148\u641c\u7d22",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/evaluate-boolean-binary-tree/description/",
+        "entry_point": "evaluateTree",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "TreeNode"
+                ],
+                "returnType": "bool"
+            },
+            "java": {
+                "paramsType": [
+                    "TreeNode"
+                ],
+                "returnType": "boolean"
+            },
+            "c++": {
+                "paramsType": [
+                    "TreeNode*"
+                ],
+                "returnType": "bool"
+            }
+        }
+    },
+    {
+        "id": 59,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u5b66\uff0c\u6808",
+        "difficulty": "hard",
+        "url": "https://www.hackerrank.com/challenges/and-xor-or/problem",
+        "entry_point": "andXorOr",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 60,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u66b4\u529b\u641c\u7d22\uff0c\u6392\u5e8f",
+        "difficulty": "easy",
+        "url": "https://www.hackerrank.com/challenges/missing-numbers/problem",
+        "entry_point": "missingNumbers",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "List[int]"
+                ],
+                "returnType": "List[int]"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>",
+                    "List<Integer>"
+                ],
+                "returnType": "List<Integer>"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "vector<int>"
+                ],
+                "returnType": "vector<int>"
+            }
+        }
+    },
+    {
+        "id": 61,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u5b66\uff0cdp",
+        "difficulty": "hard",
+        "url": "https://www.hackerrank.com/challenges/maximum-subarray-sum/problem",
+        "entry_point": "maximumSum",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Long>",
+                    "long"
+                ],
+                "returnType": "long"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<long>",
+                    "long"
+                ],
+                "returnType": "long"
+            }
+        }
+    },
+    {
+        "id": 62,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u5b66\uff0c\u6253\u8868",
+        "difficulty": "medium",
+        "url": "https://www.hackerrank.com/challenges/magic-square-forming/problem",
+        "entry_point": "formingMagicSquare",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[List[int]]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<List<Integer>>"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<vector<int>>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 63,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u5b66",
+        "difficulty": "medium",
+        "url": "https://www.hackerrank.com/challenges/is-fibo/problem",
+        "entry_point": "isFibo",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int"
+                ],
+                "returnType": "str"
+            },
+            "java": {
+                "paramsType": [
+                    "long"
+                ],
+                "returnType": "String"
+            },
+            "c++": {
+                "paramsType": [
+                    "long long"
+                ],
+                "returnType": "string"
+            }
+        }
+    },
+    {
+        "id": 64,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u5b66\uff0cdp",
+        "difficulty": "hard",
+        "url": "https://www.hackerrank.com/challenges/strange-numbers/problem",
+        "entry_point": "solve",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "long",
+                    "long"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "long long",
+                    "long long"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 65,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u9898\u610f\u7406\u89e3\uff0c\u5b57\u7b26\u4e32",
+        "difficulty": "easy",
+        "url": "https://www.hackerrank.com/challenges/cavity-map/problem",
+        "entry_point": "cavityMap",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[str]"
+                ],
+                "returnType": "List[str]"
+            },
+            "java": {
+                "paramsType": [
+                    "List<String>"
+                ],
+                "returnType": "List<String>"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<string>"
+                ],
+                "returnType": "vector<string>"
+            }
+        }
+    },
+    {
+        "id": 66,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u9898\u610f\u7406\u89e3\uff0c\u6570\u5b66",
+        "difficulty": "easy",
+        "url": "https://www.hackerrank.com/challenges/p1-paper-cutting/problem",
+        "entry_point": "solve",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "long"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "long long"
+            }
+        }
+    },
+    {
+        "id": 67,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u9898\u610f\u7406\u89e3\uff0c\u6392\u5e8f",
+        "difficulty": "medium",
+        "url": "https://www.hackerrank.com/challenges/minimum-loss/problem",
+        "entry_point": "minimumLoss",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Long>"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<long>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 68,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u9898\u610f\u7406\u89e3",
+        "difficulty": "easy",
+        "url": "https://www.hackerrank.com/challenges/day-of-the-programmer/problem",
+        "entry_point": "dayOfProgrammer",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int"
+                ],
+                "returnType": "str"
+            },
+            "java": {
+                "paramsType": [
+                    "int"
+                ],
+                "returnType": "String"
+            },
+            "c++": {
+                "paramsType": [
+                    "int"
+                ],
+                "returnType": "string"
+            }
+        }
+    },
+    {
+        "id": 69,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u9898\u610f\u7406\u89e3\uff0c\u5b57\u7b26\u4e32",
+        "difficulty": "easy",
+        "url": "https://www.hackerrank.com/challenges/acm-icpc-team/problem",
+        "entry_point": "acmTeam",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[str]"
+                ],
+                "returnType": "List[int]"
+            },
+            "java": {
+                "paramsType": [
+                    "List<String>"
+                ],
+                "returnType": "List<Integer>"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<string>"
+                ],
+                "returnType": "vector<int>"
+            }
+        }
+    },
+    {
+        "id": 70,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u9898\u610f\u7406\u89e3\uff0c\u5b57\u7b26\u4e32",
+        "difficulty": "medium",
+        "url": "https://www.hackerrank.com/challenges/the-time-in-words/problem",
+        "entry_point": "timeInWords",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "str"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "String"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "string"
+            }
+        }
+    },
+    {
+        "id": 71,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u56fe\uff0c\u6811\uff0c\u62d3\u6251\u6392\u5e8f",
+        "difficulty": "hard",
+        "url": "https://leetcode.cn/problems/collect-coins-in-a-tree/description/",
+        "entry_point": "collectTheCoins",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "List[List[int]]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]",
+                    "int[][]"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "vector<vector<int>>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 72,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u9898\u610f\u7406\u89e3\uff0c\u6570\u5b66",
+        "difficulty": "hard",
+        "url": "https://www.hackerrank.com/challenges/matrix-rotation-algo/problem",
+        "entry_point": "matrixRotation",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[List[int]]",
+                    "int"
+                ],
+                "returnType": "List[List[int]]"
+            },
+            "java": {
+                "paramsType": [
+                    "List<List<Integer>>",
+                    "int"
+                ],
+                "returnType": "List<List<Integer>>"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<vector<int>>",
+                    "int"
+                ],
+                "returnType": "vector<vector<int>>"
+            }
+        }
+    },
+    {
+        "id": 73,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u5b66\uff0c\u6ed1\u52a8\u7a97\u53e3",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/find-the-k-beauty-of-a-number/description/",
+        "entry_point": "divisorSubstrings",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 74,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u9898\u610f\u7406\u89e3\uff0c\u6570\u8bba",
+        "difficulty": "medium",
+        "url": "https://www.hackerrank.com/challenges/bus-station/problem",
+        "entry_point": "solve",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "List[int]"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>"
+                ],
+                "returnType": "List<Integer>"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "vector<int>"
+            }
+        }
+    },
+    {
+        "id": 75,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u9898\u610f\u7406\u89e3\uff0c\u8d2a\u5fc3\uff0c\u6392\u5e8f",
+        "difficulty": "easy",
+        "url": "https://www.hackerrank.com/challenges/mark-and-toys/problem",
+        "entry_point": "maximumToys",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<Integer>",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 76,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4\uff0c\u6a21\u62df",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/sum-of-squares-of-special-elements/description/",
+        "entry_point": "sumOfSquares",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 77,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4\uff0c\u524d\u7f00\u548c",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/apply-operations-to-make-all-array-elements-equal-to-zero/description/",
+        "entry_point": "checkArray",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "bool"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]",
+                    "int"
+                ],
+                "returnType": "boolean"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "bool"
+            }
+        }
+    },
+    {
+        "id": 78,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u52a8\u6001\u89c4\u5212",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/longest-non-decreasing-subarray-from-two-arrays/description/",
+        "entry_point": "maxNonDecreasingLength",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]",
+                    "int[]"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 79,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u52a8\u6001\u89c4\u5212",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/maximum-number-of-jumps-to-reach-the-last-index/description/",
+        "entry_point": "maximumJumps",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 80,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u5b66",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/find-the-maximum-achievable-number/description/",
+        "entry_point": "theMaximumAchievableX",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 81,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4\uff0c\u54c8\u5e0c\u8868\uff0c\u679a\u4e3e",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/number-of-black-blocks/solutions/",
+        "entry_point": "countBlackBlocks",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "int",
+                    "List[List[int]]"
+                ],
+                "returnType": "List[int]"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "int",
+                    "int[][]"
+                ],
+                "returnType": "long[]"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "int",
+                    "vector<vector<int>>"
+                ],
+                "returnType": "vector<long long>"
+            }
+        }
+    },
+    {
+        "id": 82,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u56de\u6eaf\uff0c\u52a8\u6001\u89c4\u5212",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/partition-string-into-minimum-beautiful-substrings/description/",
+        "entry_point": "minimumBeautifulSubstrings",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "str"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "String"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "string"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 83,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u5b66\uff0cgcd",
+        "difficulty": "medium",
+        "url": "https://www.luogu.com.cn/problem/P1029",
+        "entry_point": "gcdAndLcm",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 84,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u9898\u610f\u7406\u89e3",
+        "difficulty": "easy",
+        "url": "https://www.luogu.com.cn/problem/P1085",
+        "entry_point": "findFirstPairExceedingSum",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[List[int]]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "List<List<Integer>>"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<vector<int>>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 85,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u7ec4\uff0c\u5b57\u7b26\u4e32",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/maximum-value-of-a-string-in-an-array/",
+        "entry_point": "maximumValue",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[str]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "String[]"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<string>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 86,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6570\u8bba",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/number-of-beautiful-pairs/description/",
+        "entry_point": "countBeautifulPairs",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 87,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6392\u5e8f",
+        "difficulty": "\u6ed1\u52a8\u7a97\u53e3",
+        "url": "https://leetcode.cn/problems/count-zero-request-servers/description/",
+        "entry_point": "countServers",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "List[List[int]]",
+                    "int",
+                    "List[int]"
+                ],
+                "returnType": "List[int]"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "int[][]",
+                    "int",
+                    "int[]"
+                ],
+                "returnType": "int[]"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "vector<vector<int>>",
+                    "int",
+                    "vector<int>"
+                ],
+                "returnType": "vector<int>"
+            }
+        }
+    },
+    {
+        "id": 88,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u56fe\uff0c\u54c8\u5e0c\u8868",
+        "difficulty": "hard",
+        "url": "https://leetcode.cn/problems/add-edges-to-make-degrees-of-all-nodes-even/description/",
+        "entry_point": "isPossible",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "List[List[int]]"
+                ],
+                "returnType": "bool"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "List<List<Integer>>"
+                ],
+                "returnType": "boolean"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "vector<vector<int>>"
+                ],
+                "returnType": "bool"
+            }
+        }
+    },
+    {
+        "id": 89,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u54c8\u5e0c\u8868\uff0c\u52a8\u6001\u89c4\u5212\uff0c\u5b57\u5178\u6811",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/extra-characters-in-a-string/description/",
+        "entry_point": "minExtraChar",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "str",
+                    "List[str]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "String",
+                    "String[]"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "string",
+                    "vector<string>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 90,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22",
+        "difficulty": "hard",
+        "url": "https://leetcode.cn/problems/maximum-points-after-collecting-coins-from-all-nodes/description/",
+        "entry_point": "maximumPoints",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[List[int]]",
+                    "List[int]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[][]",
+                    "int[]",
+                    "int"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<vector<int>>",
+                    "vector<int>",
+                    "int"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 91,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u5e7f\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u56fe",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/count-the-number-of-complete-components/description/",
+        "entry_point": "countCompleteComponents",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "List[List[int]]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "int[][]"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "vector<vector<int>>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 92,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u5e7f\u5ea6\u4f18\u5148\u641c\u7d22",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/disconnect-path-in-a-binary-matrix-by-at-most-one-flip/description/",
+        "entry_point": "isPossibleToCutPath",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[List[int]]"
+                ],
+                "returnType": "bool"
+            },
+            "java": {
+                "paramsType": [
+                    "int[][]"
+                ],
+                "returnType": "boolean"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<vector<int>>"
+                ],
+                "returnType": "bool"
+            }
+        }
+    },
+    {
+        "id": 93,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u5e7f\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u5e76\u67e5\u96c6\uff0c\u56fe",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/find-if-path-exists-in-graph/description/",
+        "entry_point": "validPath",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "int",
+                    "List[List[int]]",
+                    "int",
+                    "int"
+                ],
+                "returnType": "bool"
+            },
+            "java": {
+                "paramsType": [
+                    "int",
+                    "int[][]",
+                    "int",
+                    "int"
+                ],
+                "returnType": "boolean"
+            },
+            "c++": {
+                "paramsType": [
+                    "int",
+                    "vector<vector<int>>",
+                    "int",
+                    "int"
+                ],
+                "returnType": "bool"
+            }
+        }
+    },
+    {
+        "id": 94,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u5e7f\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u94fe\u8868\uff0c\u4e8c\u53c9\u6811",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/linked-list-in-binary-tree/description/",
+        "entry_point": "isSubPath",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "ListNode",
+                    "TreeNode"
+                ],
+                "returnType": "bool"
+            },
+            "java": {
+                "paramsType": [
+                    "ListNode",
+                    "TreeNode"
+                ],
+                "returnType": "boolean"
+            },
+            "c++": {
+                "paramsType": [
+                    "ListNode*",
+                    "TreeNode*"
+                ],
+                "returnType": "bool"
+            }
+        }
+    },
+    {
+        "id": 95,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u5e7f\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u6392\u5e8f\uff0c\u4e8c\u53c9\u6811",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/all-elements-in-two-binary-search-trees/description/",
+        "entry_point": "getAllElements",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "TreeNode",
+                    "TreeNode"
+                ],
+                "returnType": "List[int]"
+            },
+            "java": {
+                "paramsType": [
+                    "TreeNode",
+                    "TreeNode"
+                ],
+                "returnType": "List<Integer>"
+            },
+            "c++": {
+                "paramsType": [
+                    "TreeNode*",
+                    "TreeNode*"
+                ],
+                "returnType": "vector<int>"
+            }
+        }
+    },
+    {
+        "id": 96,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u5e7f\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u4e8c\u53c9\u6811",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/maximum-level-sum-of-a-binary-tree/description/",
+        "entry_point": "maxLevelSum",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "TreeNode"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "TreeNode"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "TreeNode*"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 97,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u5e7f\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u4e8c\u53c9\u6811",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/sum-of-root-to-leaf-binary-numbers/description/",
+        "entry_point": "sumRootToLeaf",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "TreeNode"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "TreeNode"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "TreeNode*"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 98,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u6df1\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u5e7f\u5ea6\u4f18\u5148\u641c\u7d22\uff0c\u4e8c\u53c9\u6811",
+        "difficulty": "easy",
+        "url": "https://leetcode.cn/problems/cousins-in-binary-tree/description/",
+        "entry_point": "isCousins",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "TreeNode",
+                    "int",
+                    "int"
+                ],
+                "returnType": "bool"
+            },
+            "java": {
+                "paramsType": [
+                    "TreeNode",
+                    "int",
+                    "int"
+                ],
+                "returnType": "boolean"
+            },
+            "c++": {
+                "paramsType": [
+                    "TreeNode*",
+                    "int",
+                    "int"
+                ],
+                "returnType": "bool"
+            }
+        }
+    },
+    {
+        "id": 99,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u54c8\u5e0c\u8868\uff0c\u52a8\u6001\u89c4\u5212\uff0c\u4e8c\u5206\u67e5\u627e",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/longest-square-streak-in-an-array/description/",
+        "entry_point": "longestSquareStreak",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "List[int]"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "int[]"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "vector<int>"
+                ],
+                "returnType": "int"
+            }
+        }
+    },
+    {
+        "id": 100,
+        "des-en": "",
+        "des-cn": "",
+        "tag": "\u8d2a\u5fc3\uff0c\u5b57\u7b26\u4e32\uff0c\u53cc\u6307\u9488",
+        "difficulty": "medium",
+        "url": "https://leetcode.cn/problems/append-characters-to-string-to-make-subsequence/description/",
+        "entry_point": "appendCharacters",
+        "params": {
+            "python": {
+                "paramsType": [
+                    "str",
+                    "str"
+                ],
+                "returnType": "int"
+            },
+            "java": {
+                "paramsType": [
+                    "String",
+                    "String"
+                ],
+                "returnType": "int"
+            },
+            "c++": {
+                "paramsType": [
+                    "string",
+                    "string"
+                ],
+                "returnType": "int"
+            }
+        }
+    }
+]

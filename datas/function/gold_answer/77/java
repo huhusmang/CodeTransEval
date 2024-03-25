@@ -1,0 +1,14 @@
+public static boolean checkArray(int[] nums, int k) {
+    int n = nums.length, sumD = 0;
+    var d = new int[n + 1];
+    for (int i = 0; i < n; i++) {
+        sumD += d[i];
+        int x = nums[i];
+        x += sumD;
+        if (x == 0) continue;
+        if (x < 0 || i + k > n) return false;
+        sumD -= x;
+        d[i + k] += x;
+    }
+    return true;
+}

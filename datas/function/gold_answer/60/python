@@ -1,0 +1,10 @@
+def missingNumbers(arr, brr):
+    from collections import Counter
+    
+    mp = Counter(brr)
+    for num in arr:
+        mp[num] -= 1
+        
+    result = sorted([num for num, count in mp.items() if count > 0])
+    
+    return result

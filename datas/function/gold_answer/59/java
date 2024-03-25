@@ -1,0 +1,14 @@
+public static  int andXorOr(List<Integer> a) {
+    int m = 0;
+    Stack<Integer> s = new Stack<>();
+    for (int i : a) {
+        while (!s.isEmpty() && s.peek() >= i) {
+            m = Math.max(m, i ^ s.pop());
+        }
+        if (!s.isEmpty()) {
+            m = Math.max(m, i ^ s.peek());
+        }
+        s.push(i);
+    }
+    return m;
+}

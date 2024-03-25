@@ -1,0 +1,2 @@
+def summingSeries(n):
+    return (n*n) % 1000000007

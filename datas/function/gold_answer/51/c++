@@ -1,0 +1,6 @@
+vector<long> miniMaxSum(vector<int>& a) {
+    long long sum = std::accumulate(a.begin(), a.end(), 0LL);
+    int max = *std::max_element(a.begin(), a.end());
+    int min = *std::min_element(a.begin(), a.end());
+    return {sum - max, sum - min};
+}

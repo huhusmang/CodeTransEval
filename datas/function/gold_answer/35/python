@@ -1,0 +1,7 @@
+def canBeEqual(s1, s2):
+    cnt1 = [[0] * 26 for _ in range(2)]
+    cnt2 = [[0] * 26 for _ in range(2)]
+    for i in range(len(s1)):
+        cnt1[i % 2][ord(s1[i]) - ord('a')] += 1
+        cnt2[i % 2][ord(s2[i]) - ord('a')] += 1
+    return cnt1 == cnt2

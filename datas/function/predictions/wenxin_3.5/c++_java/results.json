@@ -1,0 +1,1033 @@
+[
+    {
+        "task": "c++_java",
+        "problem_id": 1,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 2,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 3,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 4,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 5,
+        "prediction_id": 0,
+        "answer_type": 3,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 6,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 7,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 8,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 9,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 10,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 11,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 12,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 13,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 14,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 15,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 16,
+        "prediction_id": 0,
+        "answer_type": 3,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 17,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 18,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 19,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 20,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 21,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 22,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 23,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 24,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 25,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 26,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 27,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 28,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 29,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 30,
+        "prediction_id": 0,
+        "answer_type": 3,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 31,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 32,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 33,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 34,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 35,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 36,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 37,
+        "prediction_id": 0,
+        "answer_type": 3,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 38,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 39,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 40,
+        "prediction_id": 0,
+        "answer_type": 3,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 41,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 42,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 43,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 44,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 45,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 46,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 47,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 48,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 49,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 50,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 51,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 52,
+        "prediction_id": 0,
+        "answer_type": 3,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 53,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 54,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 55,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 56,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 57,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 58,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 59,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 60,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 61,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 62,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 63,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 64,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 65,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 66,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 67,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 68,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 69,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 70,
+        "prediction_id": 0,
+        "answer_type": 3,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 71,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 72,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 73,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 74,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 75,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 76,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 77,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 78,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 79,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 80,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 81,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 82,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 83,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 84,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 85,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 86,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 87,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 88,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 89,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 90,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 91,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 92,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 93,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 94,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 95,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 96,
+        "prediction_id": 0,
+        "answer_type": 4,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 97,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 98,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 99,
+        "prediction_id": 0,
+        "answer_type": 2,
+        "Passed_testcase_nums": 0
+    },
+    {
+        "task": "c++_java",
+        "problem_id": 100,
+        "prediction_id": 0,
+        "answer_type": 1,
+        "Passed_testcase_nums": 5
+    },
+    {
+        "task": "c++_java",
+        "problem_id": "total",
+        "prediction_id": "total",
+        "answer_type": [
+            [
+                1
+            ],
+            [
+                2
+            ],
+            [
+                1
+            ],
+            [
+                2
+            ],
+            [
+                3
+            ],
+            [
+                1
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                4
+            ],
+            [
+                2
+            ],
+            [
+                1
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                1
+            ],
+            [
+                1
+            ],
+            [
+                3
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                1
+            ],
+            [
+                1
+            ],
+            [
+                1
+            ],
+            [
+                4
+            ],
+            [
+                2
+            ],
+            [
+                1
+            ],
+            [
+                1
+            ],
+            [
+                1
+            ],
+            [
+                1
+            ],
+            [
+                2
+            ],
+            [
+                4
+            ],
+            [
+                3
+            ],
+            [
+                2
+            ],
+            [
+                1
+            ],
+            [
+                2
+            ],
+            [
+                4
+            ],
+            [
+                4
+            ],
+            [
+                1
+            ],
+            [
+                3
+            ],
+            [
+                1
+            ],
+            [
+                1
+            ],
+            [
+                3
+            ],
+            [
+                4
+            ],
+            [
+                2
+            ],
+            [
+                1
+            ],
+            [
+                4
+            ],
+            [
+                4
+            ],
+            [
+                1
+            ],
+            [
+                4
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                1
+            ],
+            [
+                1
+            ],
+            [
+                3
+            ],
+            [
+                2
+            ],
+            [
+                1
+            ],
+            [
+                2
+            ],
+            [
+                4
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                1
+            ],
+            [
+                1
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                1
+            ],
+            [
+                4
+            ],
+            [
+                1
+            ],
+            [
+                1
+            ],
+            [
+                3
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                1
+            ],
+            [
+                1
+            ],
+            [
+                2
+            ],
+            [
+                1
+            ],
+            [
+                1
+            ],
+            [
+                4
+            ],
+            [
+                4
+            ],
+            [
+                1
+            ],
+            [
+                2
+            ],
+            [
+                4
+            ],
+            [
+                1
+            ],
+            [
+                1
+            ],
+            [
+                1
+            ],
+            [
+                2
+            ],
+            [
+                4
+            ],
+            [
+                4
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                4
+            ],
+            [
+                2
+            ],
+            [
+                4
+            ],
+            [
+                1
+            ],
+            [
+                2
+            ],
+            [
+                2
+            ],
+            [
+                1
+            ]
+        ],
+        "Passed_testcase_nums": 0,
+        "results": {
+            "Pass@1 estimates for each problem": "[1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0]",
+            "Passed questions": 37.0,
+            "Total questions": 100,
+            "Pass@1 rate": 0.37,
+            "Passed_testcase_nums_list": "[5, 0, 5, 0, 0, 5, 0, 0, 0, 0, 5, 0, 0, 5, 5, 0, 0, 0, 5, 5, 5, 0, 0, 5, 5, 5, 5, 0, 0, 0, 0, 5, 0, 0, 0, 5, 0, 5, 5, 0, 0, 0, 5, 0, 0, 5, 0, 0, 0, 5, 5, 0, 0, 5, 0, 0, 0, 0, 5, 5, 0, 0, 0, 0, 0, 5, 0, 5, 5, 0, 0, 0, 5, 5, 0, 5, 5, 0, 0, 5, 0, 0, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 5]",
+            "Average_passed_testcase_rates": 0.37,
+            "CodeBLEU": {
+                "codebleu": 0.6596159759402782,
+                "ngram_match_score": 0.6245399924107744,
+                "weighted_ngram_match_score": 0.6634178450313187,
+                "syntax_match_score": 0.7113623354321694,
+                "dataflow_match_score": 0.6391437308868502
+            },
+            "Answer_type_nums": {
+                "all_passed": 37,
+                "compilation_failed": 38,
+                "runtime_error": 7,
+                "wrong_answer": 18,
+                "timeout_error": 0,
+                "other_error": 0
+            }
+        }
+    }
+]

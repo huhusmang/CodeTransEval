@@ -1,0 +1,1 @@
+"Use of a broken or risky cryptographic algorithm","Using broken or weak cryptographic algorithms can allow an attacker to compromise security.","warning","Cryptographic algorithm [[""MD5""|""relative:///CertificateValidator.java:8:58:8:62""]] is weak and should not be used.","/CertificateValidator.java","8","32","8","63"

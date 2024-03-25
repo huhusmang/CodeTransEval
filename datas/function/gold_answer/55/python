@@ -1,0 +1,21 @@
+def bsearch(arr, x):
+    low = 0
+    high = len(arr) - 1
+    mid = 0  # ranking
+    while low <= high:
+        mid = (high + low) // 2
+        if arr[mid] > x:
+            low = mid + 1
+        elif arr[mid] < x:
+            high = mid - 1
+        else:
+            return mid + 1
+    return low + 1
+def climbingLeaderboard(ranked, player):
+    from collections import OrderedDict
+    rank_nums = list(OrderedDict.fromkeys(ranked))
+    result = []
+    for score in player:
+        rank = bsearch(rank_nums, score)
+        result.append(rank)
+    return result

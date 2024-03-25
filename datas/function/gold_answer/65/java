@@ -1,0 +1,19 @@
+public static  List<String> cavityMap(List<String> grid) {
+	for (int k = 1; k < grid.size() - 1; k++) {
+		char[] row = grid.get(k).toCharArray();
+		String d = grid.get(k + 1);
+		String u = grid.get(k - 1);
+		for (int j = 1; j < row.length - 1; j++) {
+			char left = row[j - 1];
+			char current = row[j];
+			char right = row[j + 1];
+			char down = d.charAt(j);
+			char up = u.charAt(j);
+			if (left < current && current > right && down < current && up < current) {
+				row[j] = 'X';
+			}
+		}
+		grid.set(k, new String(row));
+	}
+	return grid;
+}

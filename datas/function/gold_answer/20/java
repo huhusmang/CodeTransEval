@@ -1,0 +1,14 @@
+public static int minOperations(int[] nums) {
+    var cnt = new HashMap<Integer, Integer>();
+    for (int x : nums) {
+        cnt.merge(x, 1, Integer::sum);
+    }
+    int ans = 0;
+    for (int c : cnt.values()) {
+        if (c == 1) {
+            return -1;
+        }
+        ans += (c + 2) / 3;
+    }
+    return ans;
+}

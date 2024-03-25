@@ -1,0 +1,20 @@
+public static  int minimumBeautifulSubstrings(String s) {
+    final String[] fivePowersBinary = {
+        "1", "101", "11001", "1111101",
+        "1001110001", "110000110101", "11110100001001"
+    };
+    int n = s.length();
+    int[] dp = new int[n + 1];
+    dp[n] = 0;
+    for (int i = n - 1; i >= 0; i--) {
+        dp[i] = 16;
+        if (s.charAt(i) == '0') continue;
+        for (String bin : fivePowersBinary) {
+            if (i + bin.length() > n) break;
+            if (s.substring(i, i + bin.length()).equals(bin)) {
+                dp[i] = Math.min(dp[i], dp[i + bin.length()] + 1);
+            }
+        }
+    }
+    return dp[0] > n ? -1 : dp[0];
+}

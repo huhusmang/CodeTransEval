@@ -1,0 +1,14 @@
+int countPairs(vector<vector<int>> &coordinates, int k) {
+    int ans = 0;
+    unordered_map<long long, int> cnt;
+    for (auto &p: coordinates) {
+        for (int i = 0; i <= k; i++) {
+            auto it = cnt.find((p[0] ^ i) * 2000000LL + (p[1] ^ (k - i)));
+            if (it != cnt.end()) {
+                ans += it->second;
+            }
+        }
+        cnt[p[0] * 2000000LL + p[1]]++;
+    }
+    return ans;
+}

@@ -1,0 +1,13 @@
+vector<int> matchingStrings(const vector<string>& stringList, const vector<string>& queries) {
+    vector<int> arr;
+    for (const auto& i : queries) {
+        int k = 0;
+        for (const auto& j : stringList) {
+            if (i == j) {
+                ++k;
+            }
+        }
+        arr.push_back(k);
+    }
+    return arr;
+}

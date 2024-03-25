@@ -1,0 +1,21 @@
+public static int countSymmetricIntegers(int low, int high) {
+    int ans = 0;
+    for (int i = low; i <= high; i++) {
+        char[] s = Integer.toString(i).toCharArray();
+        int n = s.length;
+        if (n % 2 > 0) {
+            continue;
+        }
+        int sum = 0;
+        for (int j = 0; j < n / 2; j++) {
+            sum += s[j];
+        }
+        for (int j = n / 2; j < n; j++) {
+            sum -= s[j];
+        }
+        if (sum == 0) {
+            ans++;
+        }
+    }
+    return ans;
+}

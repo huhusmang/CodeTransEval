@@ -1,0 +1,12 @@
+public static  List<Integer> missingNumbers(List<Integer> arr, List<Integer> brr) {
+	Map<Integer, Integer> mp = new HashMap<>();
+	for (int num : brr) mp.put(num, mp.getOrDefault(num, 0) + 1);
+	for (int num : arr) mp.put(num, mp.getOrDefault(num, 0) - 1);
+	
+	List<Integer> result = new ArrayList<>();
+	for (Map.Entry<Integer, Integer> entry : mp.entrySet()) {
+		if (entry.getValue() > 0) result.add(entry.getKey());
+	}
+	
+	return result;
+}

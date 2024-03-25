@@ -1,0 +1,18 @@
+int minimumSeconds(vector<int>& nums) {
+    int n = nums.size();
+    unordered_map<int, vector<int>> umap;
+    for (int i = 0; i < n; i++) {
+        umap[nums[i]].push_back(i);
+    }
+    int ans = n;
+    for (auto &iter : umap) {
+        auto &v = iter.second;
+        v.push_back(v[0] + n);
+        int mx = - 1;
+        for (int i = 1; i < v.size(); i++) {
+            mx = max(mx, (v[i] - v[i - 1]) / 2);
+        }
+        ans = min(ans, mx);
+    }
+    return ans;
+}

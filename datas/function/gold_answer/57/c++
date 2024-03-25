@@ -1,0 +1,21 @@
+ListNode* deleteNode(ListNode* llist, int position) {
+    if (llist == nullptr) {
+        return nullptr;
+    }
+    if (position == 0) {
+        ListNode* newHead = llist->next;
+        delete llist; 
+        return newHead;
+    }
+    ListNode* current = llist;
+    for (int i = 0; current != nullptr && i < position - 1; ++i) {
+        current = current->next;
+    }
+    if (current == nullptr || current->next == nullptr) {
+        return llist;
+    }
+    ListNode* nodeToDelete = current->next;
+    current->next = current->next->next;
+    delete nodeToDelete; 
+    return llist;
+}

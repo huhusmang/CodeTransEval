@@ -1,0 +1,14 @@
+def arrayManipulation(n, queries):
+    arr = [0] * (n + 2)
+    max_val = 0
+    sum_val = 0
+    
+    for query in queries:
+        arr[query[0]] += query[2]
+        arr[query[1] + 1] -= query[2]
+    
+    for val in arr:
+        sum_val += val
+        max_val = max(max_val, sum_val)
+        
+    return max_val

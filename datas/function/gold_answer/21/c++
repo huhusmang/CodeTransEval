@@ -1,0 +1,11 @@
+int minOperations(std::vector<int>& nums, int k) {
+    int n = nums.size();
+    long long u = (2LL << k) - 2;
+    long long s = 0;
+    for (int i = n - 1; ; --i) {
+        s |= 1LL << nums[i];
+        if ((s & u) == u) {
+            return n - i;
+        }
+    }
+}

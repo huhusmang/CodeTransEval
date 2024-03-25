@@ -1,0 +1,10 @@
+public static int appendCharacters(String s, String t) {
+    int j = 0, m = t.length();
+    for (char c : s.toCharArray()) {
+        if (c == t.charAt(j)) {
+            j++;
+            if (j == m) return 0;
+        }
+    }
+    return m - j;
+}

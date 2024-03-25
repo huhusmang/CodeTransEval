@@ -1,0 +1,1 @@
+"Use of a cryptographic algorithm with insufficient key size","Using cryptographic algorithms with too small a key size can allow an attacker to compromise security.","warning","This [[""key size""|""relative:///Main.java:19:27:19:30""]] is less than the recommended key size of 2048 bits.","/Main.java","19","27","19","30"

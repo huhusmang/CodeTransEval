@@ -1,0 +1,9 @@
+def findKOr(nums: List[int], k: int) -> int:
+    ans = 0
+    for i in range(31):
+        cnt1 = 0
+        for x in nums:
+            cnt1 += x >> i & 1
+        if cnt1 >= k:
+            ans |= 1 << i
+    return ans

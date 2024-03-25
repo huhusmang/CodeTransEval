@@ -1,0 +1,18 @@
+vector<string> splitWordsBySeparator(vector<string>& words, char separator) {
+    vector<string> ans; 
+    function<void(string)> func = [&](string str){
+        string t="";
+        for(char i:str){
+            if(i==' ')continue;
+            if(i==separator){
+                if(t.size())ans.push_back(t);
+                t="";
+            }else t+=i;
+        }
+        if(t.size())ans.push_back(t);
+    };
+    for(auto i:words){
+        func(i);
+    }
+    return ans;
+}

@@ -1,0 +1,13 @@
+int maximumToys(vector<int>& prices, int k) {
+    sort(prices.begin(), prices.end());
+    int toys = 0;
+    for (int price : prices) {
+        if (price <= k) {
+            k -= price;
+            ++toys;
+        } else {
+            break;
+        }
+    }
+    return toys;
+}

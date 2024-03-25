@@ -1,0 +1,1 @@
+"`TrustManager` that accepts all certificates","Trusting all certificates allows an attacker to perform a machine-in-the-middle attack.","error","This uses [[""TrustManager""|""relative:///Main.java:11:17:19:17""]], which is defined in [[""Main$""|""relative:///Main.java:11:21:11:50""]] and trusts any certificate.","/Main.java","24","27","24","46"

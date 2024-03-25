@@ -1,0 +1,7 @@
+Translate SL to TL: SC. 
+- The input and return types of the translated function should be: PARAMS.
+- Support programming language version: {python: Python 3.10; java: OpenJDK 17; C++: C++ 20}
+- Do not return any textual content other than the translated function snippet.
+- And there is no need for any comments in the translated code.
+- Keep the translated function name [[unchanged]].
+- You should return translated code using the markdown code block syntax with target language specification.

@@ -1,0 +1,21 @@
+public static List<String> splitWordsBySeparator(List<String> words, char separator) {
+    List<String> rs = new ArrayList<>();
+    StringBuffer sb = new StringBuffer();
+    for (String word : words) {
+        for (char c : word.toCharArray()) {
+            if (c == separator) {
+                if (sb.length() > 0) {
+                    rs.add(sb.toString());
+                    sb = new StringBuffer();
+                }
+            } else {
+                sb.append(c);
+            }
+        }
+        if (sb.length() > 0) {
+            rs.add(sb.toString());
+            sb = new StringBuffer();
+        }
+    }
+    return rs;
+}

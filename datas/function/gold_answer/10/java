@@ -1,0 +1,8 @@
+public static int addMinimum(String word) {
+    var s = word.toCharArray();
+    int t = 1;
+    for (int i = 1; i < s.length; ++i)
+        if (s[i - 1] >= s[i])
+            ++t;
+    return t * 3 - s.length;
+}

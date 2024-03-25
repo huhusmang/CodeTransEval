@@ -1,0 +1,19 @@
+def isPossible(n: int, edges: List[List[int]]) -> bool:
+    g = defaultdict(set)
+    for x, y in edges:
+        g[x].add(y)
+        g[y].add(x)
+    odd = [i for i, nb in g.items() if len(nb) % 2]
+    m = len(odd)
+    if m == 0: return True
+    if m == 2:
+        x, y = odd
+        return x not in g[y] or any(
+            i != x and i != y and x not in g[i] and y not in g[i]
+            for i in range(1, n + 1))
+    if m == 4:
+        a, b, c, d = odd
+        return b not in g[a] and d not in g[c] or \
+                c not in g[a] and d not in g[b] or \
+                d not in g[a] and c not in g[b]
+    return False

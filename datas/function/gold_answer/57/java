@@ -1,0 +1,18 @@
+public static  ListNode deleteNode(ListNode llist, int position) {
+    if (llist == null) {
+        return null;
+    }
+    if (position == 0) {
+        return llist.next;
+    }
+    ListNode current = llist;
+    for (int i = 0; current != null && i < position - 1; i++) {
+        current = current.next;
+    }
+    if (current == null || current.next == null) {
+        return llist;
+    }
+    ListNode next = current.next.next;
+    current.next = next;
+    return llist;
+}

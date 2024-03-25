@@ -1,0 +1,11 @@
+def furthestDistanceFromOrigin(moves):
+    cn = 0
+    ans = 0
+    for i in range(len(moves)):
+        if moves[i] == 'L':
+            ans -= 1
+        elif moves[i] == 'R':
+            ans += 1
+        else:
+            cn += 1
+    return abs(ans) + cn

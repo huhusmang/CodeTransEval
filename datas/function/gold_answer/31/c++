@@ -1,0 +1,12 @@
+int minimumOperations(string num) {
+    int len = num.length();
+    int zero = num.find("0") != string::npos ? len - 1 : len;
+    return min({f("00", num), f("25", num), f("50", num), f("75", num), zero});
+}
+int f(string target, string num) {
+    int i = num.rfind(target[1]);
+    if (i < 0) return num.length();
+    i = num.substr(0, i).rfind(target[0]);
+    if (i < 0) return num.length();
+    return num.length() - i - 2;
+}

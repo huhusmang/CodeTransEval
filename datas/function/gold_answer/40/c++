@@ -1,0 +1,21 @@
+int minimumOperations(vector<int>& nums) {
+    vector<int> g;
+    for (int x : nums) {
+        int j = upperBound(g, x);
+        if (j == g.size()) g.push_back(x);
+        else g[j] = x;
+    }
+    return nums.size() - g.size();
+}
+int upperBound(vector<int>& g, int target) {
+    int left = -1;
+    int right = g.size();
+    while (left + 1 < right) {
+        int mid = left + (right - left) / 2;
+        if (g[mid] <= target)
+            left = mid;
+        else
+            right = mid;
+    }
+    return right;
+}

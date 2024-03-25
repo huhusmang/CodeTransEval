@@ -1,0 +1,15 @@
+long maximumSum(vector<long> &a, long m) {
+    long long max=0, sum=0;
+    set<long long> s;
+    for (auto i=a.begin() ; i!=a.end() ; i++) {
+        sum=(sum+*i)%m;
+        if (sum>max) max=sum;
+        auto b=s.upper_bound(sum);
+        if (b!=s.end()) {
+            long long possiblemax=(sum-*b+m)%m;
+            if (possiblemax>max) max=possiblemax;
+        }
+        s.insert(sum);
+    }
+    return max;
+}

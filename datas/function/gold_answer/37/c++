@@ -1,0 +1,16 @@
+int longestEqualSubarray(vector<int> &nums, int k) {
+    int n = nums.size(), ans = 0;
+    vector<vector<int>> pos(n + 1);
+    for (int i = 0; i < n; i++)
+        pos[nums[i]].push_back(i - pos[nums[i]].size());
+    for (auto &ps: pos) {
+        if (ps.size() <= ans) continue;
+        int left = 0;
+        for (int right = 0; right < ps.size(); right++) {
+            while (ps[right] - ps[left] > k) 
+                left++;
+            ans = max(ans, right - left + 1);
+        }
+    }
+    return ans;
+}

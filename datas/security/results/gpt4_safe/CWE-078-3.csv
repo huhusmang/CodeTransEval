@@ -1,0 +1,1 @@
+"Uncontrolled command line (experimental sinks)","Using externally controlled strings in a command line is vulnerable to malicious changes in the strings (includes experimental sinks).","error","This command line depends on a [[""user-provided value""|""relative:///UserInfoApplication.java:19:28:19:56""]].","/UserInfoApplication.java","26","57","26","63"

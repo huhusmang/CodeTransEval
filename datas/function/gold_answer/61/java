@@ -1,0 +1,16 @@
+public static  long maximumSum(List<Long> a, long m) {
+    long maxSum = 0;
+    long currentSum = 0;
+    TreeSet<Long> s = new TreeSet<>();
+    for (long number : a) {
+        currentSum = (currentSum + number) % m;
+        maxSum = Math.max(maxSum, currentSum);
+        Long b = s.higher(currentSum);
+        if (b != null) {
+            long possibleMax = (currentSum - b + m) % m;
+            maxSum = Math.max(maxSum, possibleMax);
+        }
+        s.add(currentSum);
+    }
+    return maxSum;
+}

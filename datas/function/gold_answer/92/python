@@ -1,0 +1,22 @@
+def reach(x: int, y: int, grid: List[List[int]]) -> bool:
+    n, m = len(grid), len(grid[0])
+    if x == n - 1 and y == m - 1:
+        return True
+    grid[x][y] = 0
+    x1, y1 = x, y + 1
+    if y1 < m and grid[x1][y1] == 1:
+        ret = reach(x1, y1, grid)
+        if ret:
+            return ret
+    x2, y2 = x + 1, y
+    if x2 < n and grid[x2][y2] == 1:
+        return reach(x2, y2, grid)
+    return False
+def isPossibleToCutPath(grid: List[List[int]]) -> bool:
+    n, m = len(grid), len(grid[0])
+    if not reach(0, 0, grid):
+        return True
+    grid[0][0], grid[n - 1][m - 1] = 1, 1
+    if not reach(0, 0, grid):
+        return True
+    return False
