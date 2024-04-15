@@ -1,13 +1,21 @@
 import json
 import pathlib
 
-QL_base_path = "/home/huhu/codeql-home/codeql-repo/python/ql/src/Security"
-to_change_cweid = {
-    "CWE-099": "CWE-022",
-    "CWE-113": "CWE-113",
-    "CWE-259": "CWE-798",
-    "CWE-287": "CWE-287",
-    "CWE-400": "CWE-730",
+PYTHON_CODEQL_BASE_PATH = pathlib.Path(
+    "/home/huhu/codeql-home/codeql-repo/python/ql/src"
+)
+# Mapping for CWE changes and experimental CWEs
+PYTHON_CWE_CHANGES = {
+    "CWE-020": PYTHON_CODEQL_BASE_PATH
+    / "Security/CWE-020-ExternalAPIs/UntrustedDataToExternalAPI.ql",
+    "CWE-208": PYTHON_CODEQL_BASE_PATH / "experimental/Security/CWE-208",
+    "CWE-287": PYTHON_CODEQL_BASE_PATH
+    / "experimental/Security/CWE-287-ConstantSecretKey",
+    "CWE-338": PYTHON_CODEQL_BASE_PATH / "experimental/Security/CWE-338",
+    "CWE-347": PYTHON_CODEQL_BASE_PATH / "experimental/Security/CWE-347",
+    "CWE-348": PYTHON_CODEQL_BASE_PATH / "experimental/Security/CWE-348",
+    "CWE-400": PYTHON_CODEQL_BASE_PATH / "Security/CWE-730",
+    "CWE-614": PYTHON_CODEQL_BASE_PATH / "experimental/Security/CWE-614",
 }
 
 
@@ -18,10 +26,10 @@ def build_json(path: str):
     for cwe_dir in sorted(path.iterdir()):
         if cwe_dir.is_dir():
             cwe_id = cwe_dir.name
-            if cwe_id in to_change_cweid:
-                Check_ql = QL_base_path + "/" + to_change_cweid[cwe_id]
+            if cwe_id in PYTHON_CWE_CHANGES:
+                Check_ql = PYTHON_CWE_CHANGES[cwe_id]
             else:
-                Check_ql = QL_base_path + "/" + cwe_id
+                Check_ql = PYTHON_CODEQL_BASE_PATH / cwe_id
 
             for subdir in sorted(cwe_dir.iterdir()):
                 if subdir.is_dir():
@@ -42,13 +50,13 @@ def build_json(path: str):
                     data_dict["ID"] = ID
                     data_dict["VulCode"] = VulCode
                     data_dict["Source"] = Source
-                    data_dict["Check_ql"] = Check_ql
+                    data_dict["Check_ql"] = str(Check_ql)
 
                     datas.append(data_dict)
 
-    with open("/home/huhu/work/CodeTransSecEval/data/datas.json", "w") as f:
+    with open("/home/huhu/work/CodeTransSecEval/datas/security/datas.json", "w") as f:
         json.dump(datas, f, indent=4)
 
 
 if __name__ == "__main__":
-    build_json("/home/huhu/work/CodeTransSecEval/data/CWE_Data")
+    build_json("/home/huhu/work/CodeTransSecEval/datas/security/datasets")

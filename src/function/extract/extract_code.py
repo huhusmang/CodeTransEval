@@ -33,7 +33,7 @@ def extract_relevant_functions(code, main_function_name, language):
     elif language == "cpp":
         return extract_relevant_cpp_functions(code, main_function_name)
     else:
-        return code
+        return code, main_function_name
 
 
 def extract_code(code_str, language, entry_point):
@@ -49,6 +49,7 @@ def extract_code(code_str, language, entry_point):
         result, main_function_name = extract_relevant_functions(pro_code, entry_point, language)
     except Exception as e:
         result = pro_code
+        main_function_name = entry_point
 
     return result, main_function_name
 

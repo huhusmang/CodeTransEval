@@ -76,7 +76,7 @@ def parse_arguments():
         help="Path to the log file",
     )
     parser.add_argument(
-        "--prediction_num", default=1, type=int, help="Number of predictions"
+        "--prediction_numss", default=1, type=int, help="Number of predictions"
     )
 
     return parser.parse_args()
@@ -131,7 +131,7 @@ def run_tests(
             prediction_path=prediction_path,
             unit_test_path=unit_test_path,
             result_path=result_path,
-            prediction_num=args.prediction_num,
+            prediction_nums=args.prediction_nums,
             logger=logger,
         )
     elif target_language == "java":
@@ -143,7 +143,7 @@ def run_tests(
             unit_test_path=unit_test_path,
             result_path=result_path,
             datas_path=args.datas_path,
-            prediction_num=args.prediction_num,
+            prediction_nums=args.prediction_nums,
             logger=logger,
         )
     elif target_language == "c++":
@@ -155,7 +155,7 @@ def run_tests(
             unit_test_path=unit_test_path,
             result_path=result_path,
             datas_path=args.datas_path,
-            prediction_num=args.prediction_num,
+            prediction_nums=args.prediction_nums,
             logger=logger,
         )
     else:

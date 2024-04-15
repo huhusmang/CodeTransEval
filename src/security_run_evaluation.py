@@ -2,6 +2,7 @@ import pathlib
 import re
 import subprocess
 import time
+import argparse
 from typing import List
 
 from pydantic import BaseModel, Field
@@ -12,8 +13,7 @@ PYTHON_CODEQL_BASE_PATH = pathlib.Path(
 )
 JAVA_CODEQL_BASE_PATH = pathlib.Path("/home/huhu/codeql-home/codeql-repo/java/ql/src")
 SCRIPTS_BASE_PATH = pathlib.Path("/home/huhu/work/CodeTransSecEval/scripts")
-DATA_BASE_PATH = pathlib.Path("/home/huhu/work/CodeTransSecEval/data")
-LOG_BASE_PATH = DATA_BASE_PATH / "log"
+DATA_BASE_PATH = pathlib.Path("/home/huhu/work/CodeTransSecEval/datas/security")
 
 # Mapping for CWE changes and experimental CWEs
 PYTHON_CWE_CHANGES = {
@@ -43,7 +43,7 @@ JAVA_CWE_CHANGES = {
 class Config(BaseModel):
     model: str
     operation: str
-    log_base_path: pathlib.Path = Field(default=LOG_BASE_PATH)
+    log_base_path: pathlib.Path = Field(default=DATA_BASE_PATH / "logs")
     dataset_base_path: pathlib.Path = Field(default=DATA_BASE_PATH / "predictions")
     database_base_path: pathlib.Path = Field(default=DATA_BASE_PATH / "databases")
     result_base_path: pathlib.Path = Field(default=DATA_BASE_PATH / "results")
@@ -145,9 +145,17 @@ def execute_script_and_log(
             log_file.write(f"{cwe}: {status}\n")
 
 
-def main(
-    model: str = "gpt4", operation: str = "create", only_execute: bool = False
-) -> None:
+def parse_arguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--model_name", type=str, default="gpt4", help="Name of the model"
+    )
+    return parser.parse_args()
+
+
+def main(operation: str = "create", only_execute: bool = False) -> None:
+    args = parse_arguments()
+    model = args.model_name
     configs = Config(model=model, operation=operation)
     if not only_execute:
         commands = generate_commands(configs)
@@ -160,4 +168,5 @@ if __name__ == "__main__":
         "1": "create",
         "2": "analyze",
     }
-    main(model="gpt4_safe", operation=operation["2"], only_execute=False)
+    main(operation=operation["1"], only_execute=False)
+    main(operation=operation["2"], only_execute=False)

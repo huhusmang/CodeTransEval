@@ -161,7 +161,7 @@
         ]
     },
     {
-        "model": "wenxin",
+        "model": "ERNIE-Bot-4",
         "tasks_results": [
             {
                 "task": "c++_java",
@@ -322,7 +322,7 @@
         ]
     },
     {
-        "model": "qwen",
+        "model": "qwen-max",
         "tasks_results": [
             {
                 "task": "c++_java",
@@ -483,7 +483,7 @@
         ]
     },
     {
-        "model": "minimax",
+        "model": "abab5.5-chat",
         "tasks_results": [
             {
                 "task": "c++_java",
@@ -644,7 +644,7 @@
         ]
     },
     {
-        "model": "zhipu",
+        "model": "chatglm_turbo",
         "tasks_results": [
             {
                 "task": "c++_java",
@@ -805,7 +805,7 @@
         ]
     },
     {
-        "model": "wenxin_3.5",
+        "model": "ERNIE-Bot",
         "tasks_results": [
             {
                 "task": "c++_java",
@@ -966,7 +966,7 @@
         ]
     },
     {
-        "model": "gpt4",
+        "model": "gpt-4-1106-preview",
         "tasks_results": [
             {
                 "task": "c++_java",

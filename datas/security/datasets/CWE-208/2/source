@@ -1,1 +1,1 @@
-codeql
+https://github.com/github/codeql/blob/main/python/ql/src/experimental/Security/CWE-208/TimingAttackAgainstSensitiveInfo/UnSafeComparisonOfSensitiveInfo.py

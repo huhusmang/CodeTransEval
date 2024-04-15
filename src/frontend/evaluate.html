@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Code Translation Evaluation</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">CodeTransEval</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <div class="navbar-nav">
+            <div class="nav-item text-nowrap">
+                <a class="nav-link px-3" href="#">Sign out</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">
+                                <span data-feather="home"></span>
+                                README
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="dataset.html">
+                                <span data-feather="database"></span>
+                                Datasets
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="cpu"></span>
+                                Evaluate
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="prediction.html">
+                                <span data-feather="trending-up"></span>
+                                Prediction
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="analyze.html">
+                                <span data-feather="code"></span>
+                                Analyze
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="leaderboard.html">
+                                <span data-feather="award"></span>
+                                Leaderboard
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+                <div class="pagetitle">
+                    <h1>Evaluate</h1>
+                </div><!-- End Page Title -->
+
+                <div class="row-spacing-head"></div> <!-- New div for spacing -->
+
+                <div class="row">
+                    <div class="col-lg-6">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Function Prediction</h5>
+
+                                <!-- General Form Elements -->
+                                <form id="functionPredictionForm">
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Model</label>
+                                        <div class="col-sm-10">
+                                            <select id="func-gen-model" class="form-select" aria-label="Default select example">
+                                                <option selected>Open this select menu</option>
+                                                <option value="gpt-4-0125-preview">gpt-4-0125-preview</option>
+                                                <option value="gpt-4-turbo-preview">gpt-4-turbo-preview</option>
+                                                <option value="gpt-4-1106-preview">gpt-4-1106-preview</option>
+                                                <option value="gpt-4">gpt-4</option>
+                                                <option value="gpt-4-0613">gpt-4-0613</option>
+                                                <option value="gpt-4-32k">gpt-4-32k</option>
+                                                <option value="gpt-4-32k-0613">gpt-4-32k-0613</option>
+                                                <option value="gpt-3.5-turbo-0125">gpt-3.5-turbo-0125</option>
+                                                <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+                                                <option value="gpt-3.5-turbo-1106">gpt-3.5-turbo-1106</option>
+                                                <option value="gpt-3.5-turbo-instruct">gpt-3.5-turbo-instruct</option>
+                                                <option value="abab6-chat">abab6-chat</option>
+                                                <option value="abab5.5-chat">abab5.5-chat</option>
+                                                <option value="abab5.5s-chat">abab5.5s-chat</option>
+                                                <option value="qwen-max">qwen-max</option>
+                                                <option value="qwen-turbo">qwen-turbo</option>
+                                                <option value="qwen-plus">qwen-plus</option>
+                                                <option value="qwen-max-1201">qwen-max-1201</option>
+                                                <option value="qwen-max-longcontext">qwen-max-longcontext</option>
+                                                <option value="spark">spark</option>
+                                                <option value="ERNIE-Bot-4">ERNIE-Bot-4</option>
+                                                <option value="ERNIE-Bot-8k">ERNIE-Bot-8k</option>
+                                                <option value="ERNIE-Bot">ERNIE-Bot</option>
+                                                <option value="ERNIE-3.5-4K-0205">ERNIE-3.5-4K-0205</option>
+                                                <option value="ERNIE-3.5-8K-0205">ERNIE-3.5-8K-0205</option>
+                                                <option value="ERNIE-3.5-8K-1222">ERNIE-3.5-8K-1222</option>
+                                                <option value="ERNIE-Bot-turbo">ERNIE-Bot-turbo</option>
+                                                <option value="glm-4">glm-4</option>
+                                                <option value="glm-3-turbo">glm-3-turbo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Task</label>
+                                        <div class="col-sm-10">
+                                            <select id="func-gen-task" class="form-select" aria-label="Default select example">
+                                                <option selected>Open this select menu</option>
+                                                <option value="python_java">Python_Java</option>
+                                                <option value="python_c++">Python_C++</option>
+                                                <option value="java_python">Java_Python</option>
+                                                <option value="java_c++">Java_C++</option>
+                                                <option value="c++_python">C++_Python</option>
+                                                <option value="c++_java">C++_Java</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Prediction Count</label>
+                                        <div class="col-sm-10">
+                                            <input id="func-gen-predictionCount" type="number" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Submit Button</label>
+                                        <div class="col-sm-10">
+                                            <button type="submit" class="btn btn-primary">Submit Form</button>
+                                        </div>
+                                    </div>
+
+                                </form><!-- End General Form Elements -->
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Function Evaluation</h5>
+
+                                <!-- General Form Elements -->
+                                <form id="functionEvaluationForm">
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Model</label>
+                                        <div class="col-sm-10">
+                                            <select id="func-eval-model" class="form-select" aria-label="Default select example">
+                                                <option selected>Open this select menu</option>
+                                                <option value="gpt-4-0125-preview">gpt-4-0125-preview</option>
+                                                <option value="gpt-4-turbo-preview">gpt-4-turbo-preview</option>
+                                                <option value="gpt-4-1106-preview">gpt-4-1106-preview</option>
+                                                <option value="gpt-4">gpt-4</option>
+                                                <option value="gpt-4-0613">gpt-4-0613</option>
+                                                <option value="gpt-4-32k">gpt-4-32k</option>
+                                                <option value="gpt-4-32k-0613">gpt-4-32k-0613</option>
+                                                <option value="gpt-3.5-turbo-0125">gpt-3.5-turbo-0125</option>
+                                                <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+                                                <option value="gpt-3.5-turbo-1106">gpt-3.5-turbo-1106</option>
+                                                <option value="gpt-3.5-turbo-instruct">gpt-3.5-turbo-instruct</option>
+                                                <option value="abab6-chat">abab6-chat</option>
+                                                <option value="abab5.5-chat">abab5.5-chat</option>
+                                                <option value="abab5.5s-chat">abab5.5s-chat</option>
+                                                <option value="qwen-max">qwen-max</option>
+                                                <option value="qwen-turbo">qwen-turbo</option>
+                                                <option value="qwen-plus">qwen-plus</option>
+                                                <option value="qwen-max-1201">qwen-max-1201</option>
+                                                <option value="qwen-max-longcontext">qwen-max-longcontext</option>
+                                                <option value="spark">spark</option>
+                                                <option value="ERNIE-Bot-4">ERNIE-Bot-4</option>
+                                                <option value="ERNIE-Bot-8k">ERNIE-Bot-8k</option>
+                                                <option value="ERNIE-Bot">ERNIE-Bot</option>
+                                                <option value="ERNIE-3.5-4K-0205">ERNIE-3.5-4K-0205</option>
+                                                <option value="ERNIE-3.5-8K-0205">ERNIE-3.5-8K-0205</option>
+                                                <option value="ERNIE-3.5-8K-1222">ERNIE-3.5-8K-1222</option>
+                                                <option value="ERNIE-Bot-turbo">ERNIE-Bot-turbo</option>
+                                                <option value="glm-4">glm-4</option>
+                                                <option value="glm-3-turbo">glm-3-turbo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Task</label>
+                                        <div class="col-sm-10">
+                                            <select id="func-eval-task" class="form-select" aria-label="Default select example">
+                                                <option selected>Open this select menu</option>
+                                                <option value="python_java">Python_Java</option>
+                                                <option value="python_c++">Python_C++</option>
+                                                <option value="java_python">Java_Python</option>
+                                                <option value="java_c++">Java_C++</option>
+                                                <option value="c++_python">C++_Python</option>
+                                                <option value="c++_java">C++_Java</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Prediction Count</label>
+                                        <div class="col-sm-10">
+                                            <input id="func-eval-predictionCount" type="number" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Submit Button</label>
+                                        <div class="col-sm-10">
+                                            <button type="submit" class="btn btn-primary">Submit Form</button>
+                                        </div>
+                                    </div>
+
+                                </form><!-- End General Form Elements -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row-spacing"></div> <!-- New div for spacing -->
+
+                <div class="row">
+                    <div class="col-lg-6">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Security Prediction</h5>
+
+                                <!-- General Form Elements -->
+                                <form id="securityPredictionForm">
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Model</label>
+                                        <div class="col-sm-10">
+                                            <select id="sec-gen-model" class="form-select" aria-label="Default select example">
+                                                <option selected>Open this select menu</option>
+                                                <option value="gpt-4-0125-preview">gpt-4-0125-preview</option>
+                                                <option value="gpt-4-turbo-preview">gpt-4-turbo-preview</option>
+                                                <option value="gpt-4-1106-preview">gpt-4-1106-preview</option>
+                                                <option value="gpt-4">gpt-4</option>
+                                                <option value="gpt-4-0613">gpt-4-0613</option>
+                                                <option value="gpt-4-32k">gpt-4-32k</option>
+                                                <option value="gpt-4-32k-0613">gpt-4-32k-0613</option>
+                                                <option value="gpt-3.5-turbo-0125">gpt-3.5-turbo-0125</option>
+                                                <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+                                                <option value="gpt-3.5-turbo-1106">gpt-3.5-turbo-1106</option>
+                                                <option value="gpt-3.5-turbo-instruct">gpt-3.5-turbo-instruct</option>
+                                                <option value="abab6-chat">abab6-chat</option>
+                                                <option value="abab5.5-chat">abab5.5-chat</option>
+                                                <option value="abab5.5s-chat">abab5.5s-chat</option>
+                                                <option value="qwen-max">qwen-max</option>
+                                                <option value="qwen-turbo">qwen-turbo</option>
+                                                <option value="qwen-plus">qwen-plus</option>
+                                                <option value="qwen-max-1201">qwen-max-1201</option>
+                                                <option value="qwen-max-longcontext">qwen-max-longcontext</option>
+                                                <option value="spark">spark</option>
+                                                <option value="ERNIE-Bot-4">ERNIE-Bot-4</option>
+                                                <option value="ERNIE-Bot-8k">ERNIE-Bot-8k</option>
+                                                <option value="ERNIE-Bot">ERNIE-Bot</option>
+                                                <option value="ERNIE-3.5-4K-0205">ERNIE-3.5-4K-0205</option>
+                                                <option value="ERNIE-3.5-8K-0205">ERNIE-3.5-8K-0205</option>
+                                                <option value="ERNIE-3.5-8K-1222">ERNIE-3.5-8K-1222</option>
+                                                <option value="ERNIE-Bot-turbo">ERNIE-Bot-turbo</option>
+                                                <option value="glm-4">glm-4</option>
+                                                <option value="glm-3-turbo">glm-3-turbo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Task</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" value="Python_Java" disabled>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Submit Button</label>
+                                        <div class="col-sm-10">
+                                            <button type="submit" class="btn btn-primary">Submit Form</button>
+                                        </div>
+                                    </div>
+
+                                </form><!-- End General Form Elements -->
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Security Evaluation</h5>
+
+                                <!-- General Form Elements -->
+                                <form id="securityEvaluationForm">
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Model</label>
+                                        <div class="col-sm-10">
+                                            <select id="sec-eval-model" class="form-select" aria-label="Default select example">
+                                                <option selected>Open this select menu</option>
+                                                <option value="gpt-4-0125-preview">gpt-4-0125-preview</option>
+                                                <option value="gpt-4-turbo-preview">gpt-4-turbo-preview</option>
+                                                <option value="gpt-4-1106-preview">gpt-4-1106-preview</option>
+                                                <option value="gpt-4">gpt-4</option>
+                                                <option value="gpt-4-0613">gpt-4-0613</option>
+                                                <option value="gpt-4-32k">gpt-4-32k</option>
+                                                <option value="gpt-4-32k-0613">gpt-4-32k-0613</option>
+                                                <option value="gpt-3.5-turbo-0125">gpt-3.5-turbo-0125</option>
+                                                <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+                                                <option value="gpt-3.5-turbo-1106">gpt-3.5-turbo-1106</option>
+                                                <option value="gpt-3.5-turbo-instruct">gpt-3.5-turbo-instruct</option>
+                                                <option value="abab6-chat">abab6-chat</option>
+                                                <option value="abab5.5-chat">abab5.5-chat</option>
+                                                <option value="abab5.5s-chat">abab5.5s-chat</option>
+                                                <option value="qwen-max">qwen-max</option>
+                                                <option value="qwen-turbo">qwen-turbo</option>
+                                                <option value="qwen-plus">qwen-plus</option>
+                                                <option value="qwen-max-1201">qwen-max-1201</option>
+                                                <option value="qwen-max-longcontext">qwen-max-longcontext</option>
+                                                <option value="spark">spark</option>
+                                                <option value="ERNIE-Bot-4">ERNIE-Bot-4</option>
+                                                <option value="ERNIE-Bot-8k">ERNIE-Bot-8k</option>
+                                                <option value="ERNIE-Bot">ERNIE-Bot</option>
+                                                <option value="ERNIE-3.5-4K-0205">ERNIE-3.5-4K-0205</option>
+                                                <option value="ERNIE-3.5-8K-0205">ERNIE-3.5-8K-0205</option>
+                                                <option value="ERNIE-3.5-8K-1222">ERNIE-3.5-8K-1222</option>
+                                                <option value="ERNIE-Bot-turbo">ERNIE-Bot-turbo</option>
+                                                <option value="glm-4">glm-4</option>
+                                                <option value="glm-3-turbo">glm-3-turbo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Task</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" value="Python_Java" disabled>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Submit Button</label>
+                                        <div class="col-sm-10">
+                                            <button type="submit" class="btn btn-primary">Submit Form</button>
+                                        </div>
+                                    </div>
+
+                                </form><!-- End General Form Elements -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row-spacing"></div> <!-- New div for spacing -->
+
+                <div class="card" id="status-card">
+                    <div class="card-body", id="status-card-body">
+                        <h5 class="card-title" id="status-card-title">Task Status</h5>
+                        <!-- Buttons will be added here dynamically -->
+                    </div>
+                    <div class="row-spacing"></div> <!-- New div for spacing -->
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+        crossorigin="anonymous"></script>
+    <!-- Add before your closing </body> tag -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="js/evaluate.js"></script>
+
+    <script>
+        feather.replace()
+    </script>
+</body>
+
+</html>

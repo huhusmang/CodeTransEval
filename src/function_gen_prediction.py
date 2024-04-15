@@ -79,6 +79,7 @@ def main(
     datas_path,
     json_path,
     jsonl_path,
+    is_save,
 ):
     sl, tl = task.split("_")
     datas = load_json(datas_path)
@@ -96,8 +97,8 @@ def main(
             ).response
             prediction, main_fun_name = extract_code(
                 raw_prediction,
-                datas[i - 1]["entry_point"],
                 tl,
+                datas[i - 1]["entry_point"],
             )
             result = prediction if prediction != "" else raw_prediction
 
@@ -115,8 +116,9 @@ def main(
 
             print("Task_id: " + str(i) + "_" + str(j) + "    done")
 
-    save_results(json_path, json_datas)
-    save_results(jsonl_path, json_datas, jsonl=True)
+    if is_save:
+        save_results(json_path, json_datas)
+        save_results(jsonl_path, json_datas, jsonl=True)
 
 
 if __name__ == "__main__":
@@ -159,6 +161,11 @@ if __name__ == "__main__":
         type=str,
         default="/home/huhu/work/CodeTransSecEval/src/prompts/function_prompt.txt",
     )
+    parser.add_argument(
+        "--is_save",
+        action='store_true',
+        help="Whether to save the results to file",
+    )
     args = parser.parse_args()
 
     json_path = (
@@ -187,4 +194,5 @@ if __name__ == "__main__":
         prompt_file_path=args.prompt_file_path,
         json_path=json_path,
         jsonl_path=jsonl_path,
+        is_save=args.is_save,
     )

@@ -14,7 +14,7 @@ class GPT(LLM):
         :param chat_input: The input for the chat
         :return: The chat response
         """
-        base_url = "https://gptmos.com/v1"
+        base_url = "http://117.50.185.54:3000/v1"
         client = OpenAI(api_key=self.__openai_api_key, base_url=base_url)
 
         response = client.chat.completions.create(

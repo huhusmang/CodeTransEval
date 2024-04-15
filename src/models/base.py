@@ -6,7 +6,7 @@ class ChatInput(BaseModel):
     prompt: str
     top_p: float = 0.7
     temperature: float = 0.9
-    max_tokens: int = 4096
+    max_tokens: int = 3000
 
 
 class ChatOutput(BaseModel):
