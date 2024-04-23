@@ -5,10 +5,6 @@ datas/function/unit_tests/
 datas/function/logs/
 src/archive
 
-# some temp files
-temp.json
-test.ipynb
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

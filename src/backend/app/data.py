@@ -36,7 +36,7 @@ class SecData(BaseModel):
 @router.get("/functiondata")
 async def read_func_data():
     # Replace this with actual data fetching logic
-    with open("/home/huhu/work/CodeTransSecEval/datas/function/new_datas.json") as f:
+    with open("/home/huhu/work/CodeTransSecEval/datas/function/datas.json") as f:
         data = json.load(f)
     return data
 
