@@ -4,6 +4,7 @@ datas/security/log/
 datas/function/unit_tests/
 datas/function/logs/
 src/archive
+temp
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

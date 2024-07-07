@@ -8,7 +8,7 @@ router = APIRouter()
 class FuncItem(BaseModel):
     model: str
     task: str
-    prediction_count: int
+    predictionCount: int
 
 
 class SecItem(BaseModel):
@@ -44,7 +44,7 @@ async def funcgen(item: FuncItem):
         --task {item.task} \
         --start 1 \
         --end 2 \
-        --prediction_nums {item.prediction_count} \
+        --prediction_nums {item.predictionCount} \
         --is_save \
         > /home/huhu/work/CodeTransSecEval/datas/function/logs/temp/functionprediction.log 2>&1 &
     """
@@ -59,7 +59,7 @@ async def funceval(item: FuncItem):
         --task {item.task} \
         --start 1 \
         --end 2 \
-        --prediction_nums {item.prediction_count} 
+        --prediction_nums {item.predictionCount} 
         > /home/huhu/work/CodeTransSecEval/datas/function/logs/temp/functionevaluation.log 2>&1 &
     """
     return run_command(command)
