@@ -10,6 +10,7 @@ This project is an automated framework for evaluating the functionality and secu
 3. **Automated Evaluation Framework** 🤖: Includes model inference, input and output processing, template setting, batch execution, metric calculation, and visualization analysis.
 4. **Front-end UI** 🌐: Facilitates browsing datasets, submitting tasks, checking task status, and analyzing model output results.
 
+![evaluation flow chart](images/Workflow.png)
 ## Installation Guide 🛠️
 
 ### 1. Clone the project
