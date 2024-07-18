@@ -7,7 +7,7 @@ src/archive
 temp
 
 # vscode files
-.vscode/
+.vscode/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
