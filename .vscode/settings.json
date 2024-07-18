@@ -1,8 +1,0 @@
-{
-    "java.compile.nullAnalysis.mode": "disabled",
-    "files.associations": {
-        "deque": "c",
-        "string": "c",
-        "vector": "c"
-    }
-}
